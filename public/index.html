@@ -1,0 +1,1284 @@
+<!DOCTYPE html>
+<html lang="nl" class="scroll-smooth" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="color-scheme" content="dark light" />
+  <title>VirelioCreator — Professionele Websites, Automatisch Gegenereerd</title>
+  <meta name="description" content="VirelioCreator vindt jouw bedrijf op Google Maps en genereert een professionele website — volledig automatisch en op maat. Bekijk een gratis preview." />
+  <meta property="og:title" content="VirelioCreator — Professionele Websites voor Jouw Bedrijf" />
+  <meta property="og:description" content="AI-gegenereerde websites op maat voor Nederlandse bedrijven. Bekijk jouw gratis preview." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%232f6fff' width='100' height='100' rx='20'/><text x='50' y='72' font-size='60' font-family='sans-serif' fill='white' text-anchor='middle'>V</text></svg>" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+  tailwind.config={theme:{extend:{fontFamily:{display:['Syne','system-ui','sans-serif'],body:['DM Sans','system-ui','sans-serif']},colors:{spark:{50:'#eef4ff',100:'#d9e6ff',200:'#bcd4ff',300:'#8eb8ff',400:'#5991ff',500:'#2f6fff',600:'#1a52f5',700:'#133ee1',800:'#1633b6',900:'#18308f'},ink:{50:'#f6f6f8',100:'#ededf1',200:'#d7d7e0',300:'#b6b6c5',400:'#8f8fa5',500:'#71718a',600:'#5b5b72',700:'#4a4a5d',800:'#40404f',900:'#181825',950:'#0a0a18'},violet:{400:'#a78bfa',500:'#7c3aed',600:'#6d28d9'},cyan:{400:'#22d3ee',500:'#06b6d4'}}}}}
+  </script>
+
+  <style>
+  /* ═══════════════════════════════════════════════════════════════════════
+     THEME SYSTEM — CSS Custom Properties
+     ═══════════════════════════════════════════════════════════════════ */
+  :root, [data-theme="dark"] {
+    --bg-base: #0a0a18; --bg-raised: #0f0f28; --bg-card: rgba(255,255,255,0.04);
+    --bg-card-hover: rgba(255,255,255,0.08); --bg-card-border: rgba(255,255,255,0.08);
+    --bg-card-border-hover: rgba(47,111,255,0.3); --bg-input: rgba(255,255,255,0.06);
+    --bg-input-border: rgba(255,255,255,0.1); --bg-nav: rgba(10,10,24,0.8);
+    --bg-nav-solid: rgba(10,10,24,0.95); --bg-footer: #07071a;
+    --text-base: #e2e2ef; --text-muted: #8f8fa5; --text-heading: #ffffff;
+    --text-faint: #5b5b72; --text-on-spark: #ffffff;
+    --border-subtle: rgba(255,255,255,0.06); --border-card: rgba(255,255,255,0.08);
+    --shadow-card: 0 20px 40px rgba(47,111,255,0.1);
+    --glow-blue-opacity: 0.3; --hero-overlay-end: rgba(10,10,24,0.95);
+    --browser-bg: #1e1e2e; --browser-bar: #2a2a3c; --browser-text: #71718a;
+    --phone-border: #27272a; --scrollbar-track: transparent;
+    --pricing-popular-bg: rgba(47,111,255,0.06); --pricing-popular-border: rgba(47,111,255,0.4);
+    --faq-bg: rgba(255,255,255,0.03); --faq-border: rgba(255,255,255,0.06);
+    --testimonial-bg: rgba(255,255,255,0.04); --testimonial-border: rgba(255,255,255,0.08);
+  }
+  [data-theme="light"] {
+    --bg-base: #ffffff; --bg-raised: #f1f5f9; --bg-card: rgba(0,0,0,0.02);
+    --bg-card-hover: rgba(0,0,0,0.04); --bg-card-border: rgba(0,0,0,0.08);
+    --bg-card-border-hover: rgba(47,111,255,0.4); --bg-input: rgba(0,0,0,0.03);
+    --bg-input-border: rgba(0,0,0,0.12); --bg-nav: rgba(255,255,255,0.85);
+    --bg-nav-solid: rgba(255,255,255,0.97); --bg-footer: #f8fafc;
+    --text-base: #334155; --text-muted: #64748b; --text-heading: #0f172a;
+    --text-faint: #94a3b8; --text-on-spark: #ffffff;
+    --border-subtle: rgba(0,0,0,0.06); --border-card: rgba(0,0,0,0.08);
+    --shadow-card: 0 20px 40px rgba(0,0,0,0.06);
+    --glow-blue-opacity: 0.12; --hero-overlay-end: rgba(10,10,24,0.95);
+    --browser-bg: #e2e8f0; --browser-bar: #cbd5e1; --browser-text: #64748b;
+    --phone-border: #d1d5db; --scrollbar-track: #f1f5f9;
+    --pricing-popular-bg: rgba(47,111,255,0.04); --pricing-popular-border: rgba(47,111,255,0.5);
+    --faq-bg: rgba(0,0,0,0.02); --faq-border: rgba(0,0,0,0.06);
+    --testimonial-bg: rgba(0,0,0,0.02); --testimonial-border: rgba(0,0,0,0.06);
+  }
+
+  /* ═══════════════════════════════════════════════════════════════════════
+     BASE / RESET
+     ═══════════════════════════════════════════════════════════════════ */
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:'DM Sans',system-ui,sans-serif;background:var(--bg-base);color:var(--text-base);-webkit-font-smoothing:antialiased;overflow-x:hidden;transition:background .4s,color .4s;}
+  h1,h2,h3,h4{font-family:'Syne',system-ui,sans-serif;color:var(--text-heading);transition:color .4s;}
+  a{text-decoration:none;}
+  p,li,span,label,td{transition:color .4s;}
+  section{transition:background .4s;}
+  ::selection{background:rgba(47,111,255,0.25);}
+
+  /* ── Scroll progress ── */
+  #scroll-progress{position:fixed;top:0;left:0;height:3px;z-index:9999;background:linear-gradient(90deg,#2f6fff,#7c3aed,#06b6d4);width:0;transition:none;}
+
+  /* ── Hero canvas ── */
+  #hero-canvas{position:absolute;inset:0;z-index:0;}
+  .hero-overlay{position:absolute;inset:0;z-index:1;background:radial-gradient(ellipse 80% 60% at 50% 40%,transparent 0%,rgba(10,10,24,0.5) 60%,var(--hero-overlay-end) 100%);}
+  .glow-orb{position:absolute;border-radius:50%;filter:blur(80px);pointer-events:none;z-index:0;transition:opacity .4s;}
+  .glow-blue{background:#2f6fff;width:500px;height:500px;top:-10%;right:10%;opacity:var(--glow-blue-opacity);}
+  .glow-purple{background:#7c3aed;width:400px;height:400px;bottom:10%;left:5%;opacity:var(--glow-blue-opacity);}
+  .glow-cyan{background:#06b6d4;width:300px;height:300px;top:40%;left:50%;opacity:var(--glow-blue-opacity);}
+
+  /* ── Scroll reveal (only activates after JS adds .reveal-ready to body) ── */
+  .reveal-ready [data-reveal]{opacity:0;transform:translateY(30px);transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1);}
+  .reveal-ready [data-reveal].revealed{opacity:1;transform:translateY(0);}
+  .reveal-ready [data-reveal="slide-left"]{transform:translateX(-40px);}.reveal-ready [data-reveal="slide-left"].revealed{transform:translateX(0);}
+  .reveal-ready [data-reveal="slide-right"]{transform:translateX(40px);}.reveal-ready [data-reveal="slide-right"].revealed{transform:translateX(0);}
+  .reveal-ready [data-reveal="scale"]{transform:scale(.92);}.reveal-ready [data-reveal="scale"].revealed{transform:scale(1);}
+
+  /* ── 3D devices ── */
+  .device-perspective{perspective:1200px;}
+  .device-frame{transform:rotateY(-8deg) rotateX(4deg);transition:transform .6s cubic-bezier(.16,1,.3,1);transform-style:preserve-3d;}
+  .device-frame:hover{transform:rotateY(-2deg) rotateX(1deg) scale(1.02);}
+  .device-frame-right{transform:rotateY(8deg) rotateX(4deg);transition:transform .6s cubic-bezier(.16,1,.3,1);transform-style:preserve-3d;}
+  .device-frame-right:hover{transform:rotateY(2deg) rotateX(1deg) scale(1.02);}
+  .browser-chrome{background:var(--browser-bg);border-radius:12px 12px 0 0;padding:10px 16px;display:flex;align-items:center;gap:8px;transition:background .4s;}
+  .browser-dot{width:10px;height:10px;border-radius:50%;}
+  .browser-bar{flex:1;height:28px;background:var(--browser-bar);border-radius:6px;margin-left:12px;display:flex;align-items:center;padding:0 12px;font-size:11px;color:var(--browser-text);font-family:'DM Sans',monospace;transition:background .4s,color .4s;}
+
+  /* ── Cards ── */
+  .feature-card{background:var(--bg-card);border:1px solid var(--bg-card-border);border-radius:16px;padding:2rem;transition:all .4s cubic-bezier(.16,1,.3,1);}
+  .feature-card:hover{background:var(--bg-card-hover);border-color:var(--bg-card-border-hover);transform:translateY(-4px);box-shadow:var(--shadow-card);}
+
+  /* ── Forms ── */
+  .form-input{width:100%;padding:.875rem 1.25rem;background:var(--bg-input);border:1px solid var(--bg-input-border);border-radius:12px;color:var(--text-heading);font-family:'DM Sans',sans-serif;font-size:.95rem;transition:all .3s ease;outline:none;}
+  .form-input:focus{border-color:#2f6fff;background:rgba(47,111,255,0.06);box-shadow:0 0 0 3px rgba(47,111,255,0.15);}
+  .form-input::placeholder{color:var(--text-faint);}
+
+  /* ── Gradient text ── */
+  .text-gradient{background:linear-gradient(135deg,#2f6fff 0%,#7c3aed 50%,#06b6d4 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+
+  /* ── Navbar ── */
+  .nav-glass{background:var(--bg-nav);backdrop-filter:blur(20px) saturate(1.5);border-bottom:1px solid var(--border-subtle);transition:background .4s;}
+
+  /* ── Section divider ── */
+  .section-glow{position:relative;}
+  .section-glow::before{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:60%;height:1px;background:linear-gradient(90deg,transparent,rgba(47,111,255,0.3),transparent);}
+
+  /* ── Animations ── */
+  @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+  .animate-float{animation:float 6s ease-in-out infinite;}
+  .animate-float-slow{animation:float 8s ease-in-out infinite;}
+  .animate-float-delay{animation:float 6s ease-in-out 2s infinite;}
+  @keyframes pulse-ring{0%{transform:scale(1);opacity:.4}100%{transform:scale(1.5);opacity:0}}
+
+  /* ── Typing cursor ── */
+  .typing-cursor{display:inline-block;width:2px;height:1.1em;background:#2f6fff;margin-left:2px;vertical-align:text-bottom;animation:blink .7s step-end infinite;}
+  @keyframes blink{50%{opacity:0}}
+
+  /* ── Counter ── */
+  .counter{font-variant-numeric:tabular-nums;}
+
+  /* ── Pricing toggle ── */
+  .pricing-toggle{position:relative;width:52px;height:28px;background:var(--bg-input-border);border-radius:14px;cursor:pointer;transition:background .3s;}
+  .pricing-toggle.active{background:#2f6fff;}
+  .pricing-toggle::after{content:'';position:absolute;top:3px;left:3px;width:22px;height:22px;border-radius:50%;background:white;transition:transform .3s;}
+  .pricing-toggle.active::after{transform:translateX(24px);}
+
+  /* ── FAQ accordion ── */
+  .faq-item{background:var(--faq-bg);border:1px solid var(--faq-border);border-radius:12px;overflow:hidden;transition:all .3s;}
+  .faq-item:hover{border-color:var(--bg-card-border-hover);}
+  .faq-header{padding:1.25rem 1.5rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:1rem;user-select:none;}
+  .faq-header svg{flex-shrink:0;transition:transform .3s;}
+  .faq-item.open .faq-header svg{transform:rotate(180deg);}
+  .faq-body{max-height:0;overflow:hidden;transition:max-height .4s cubic-bezier(.16,1,.3,1),padding .4s;}
+  .faq-item.open .faq-body{max-height:500px;}
+  .faq-body-inner{padding:0 1.5rem 1.25rem;}
+
+  /* ── Testimonial dots ── */
+  .testi-dot{width:8px;height:8px;border-radius:50%;background:var(--text-faint);cursor:pointer;transition:all .3s;}
+  .testi-dot.active{background:#2f6fff;width:24px;border-radius:4px;}
+
+  /* ── Language dropdown ── */
+  .lang-dropdown{position:relative;}
+  .lang-menu{position:absolute;top:calc(100% + 8px);right:0;background:var(--bg-nav-solid);border:1px solid var(--border-subtle);border-radius:12px;padding:6px;min-width:170px;opacity:0;visibility:hidden;transform:translateY(-8px);transition:all .25s;z-index:60;backdrop-filter:blur(20px);}
+  .lang-dropdown.open .lang-menu{opacity:1;visibility:visible;transform:translateY(0);}
+  .lang-option{display:flex;align-items:center;gap:10px;padding:8px 12px;border-radius:8px;cursor:pointer;font-size:13px;font-weight:500;color:var(--text-muted);transition:all .15s;white-space:nowrap;}
+  .lang-option:hover,.lang-option.active{background:rgba(47,111,255,0.1);color:var(--text-heading);}
+
+  /* ── Floating CTA ── */
+  #floating-cta{position:fixed;bottom:1.5rem;left:50%;transform:translateX(-50%) translateY(100px);z-index:40;transition:transform .5s cubic-bezier(.16,1,.3,1);pointer-events:none;}
+  #floating-cta.visible{transform:translateX(-50%) translateY(0);pointer-events:auto;}
+
+  /* ── Toast ── */
+  .toast{position:fixed;bottom:2rem;right:2rem;z-index:1000;padding:1rem 1.5rem;border-radius:12px;font-family:'DM Sans';font-weight:500;transform:translateY(120%);opacity:0;transition:all .4s cubic-bezier(.16,1,.3,1);}
+  .toast.show{transform:translateY(0);opacity:1;}
+  .toast-success{background:#059669;color:white;}
+  .toast-error{background:#dc2626;color:white;}
+
+  /* ── Scrollbar ── */
+  ::-webkit-scrollbar{width:5px;}
+  ::-webkit-scrollbar-thumb{background:#2f6fff;border-radius:3px;}
+  ::-webkit-scrollbar-track{background:var(--scrollbar-track);}
+
+  /* ── Responsive ── */
+  @media(max-width:768px){
+    .device-frame,.device-frame-right{transform:rotateY(0) rotateX(0) !important;}
+    .step-connector{display:none;}
+    #floating-cta{bottom:1rem;}
+    .lang-menu{right:-1rem;min-width:150px;}
+  }
+  /* Short viewport — compact hero further */
+  @media(max-height:750px){
+    #hero .pt-16{padding-top:3rem;}
+    #hero h1{font-size:2.5rem !important;line-height:1.1 !important;}
+    #hero .mb-5{margin-bottom:.75rem;}
+    #hero .mb-7{margin-bottom:1rem;}
+    #hero .mt-10{margin-top:1.5rem;}
+  }
+  @media(max-width:480px){
+    h1{font-size:2rem !important;line-height:1.1 !important;}
+    h2{font-size:1.75rem !important;}
+    .feature-card{padding:1.25rem;}
+    .browser-bar{font-size:9px;}
+    #contact-form{padding:1.25rem !important;}
+    .nav-glass .max-w-7xl{padding-left:1rem;padding-right:1rem;}
+  }
+  </style>
+</head>
+
+<body>
+
+<!-- ── Scroll Progress Bar ── -->
+<div id="scroll-progress"></div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════
+     NAVBAR
+     ═══════════════════════════════════════════════════════════════════ -->
+<nav class="nav-glass fixed top-0 left-0 right-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+    <!-- Logo -->
+    <a href="https://virelio.nl/" class="flex items-center gap-2.5">
+      <div class="w-9 h-9 rounded-lg bg-gradient-to-br from-spark-500 to-violet-500 flex items-center justify-center font-display font-bold text-white text-lg">V</div>
+      <span class="font-display font-bold text-lg tracking-tight" style="color:var(--text-heading)">VirelioCreator</span>
+    </a>
+    <!-- Desktop links -->
+    <div class="hidden lg:flex items-center gap-7">
+      <a href="#hoe-het-werkt" class="text-sm font-medium" style="color:var(--text-muted)" onmouseover="this.style.color='var(--text-heading)'" onmouseout="this.style.color='var(--text-muted)'"><span data-i18n="nav.how">Zo Werkt Het</span></a>
+      <a href="#features" class="text-sm font-medium" style="color:var(--text-muted)" onmouseover="this.style.color='var(--text-heading)'" onmouseout="this.style.color='var(--text-muted)'"><span data-i18n="nav.features">Features</span></a>
+      <a href="#portfolio" class="text-sm font-medium" style="color:var(--text-muted)" onmouseover="this.style.color='var(--text-heading)'" onmouseout="this.style.color='var(--text-muted)'"><span data-i18n="nav.portfolio">Voorbeelden</span></a>
+      <a href="#pricing" class="text-sm font-medium" style="color:var(--text-muted)" onmouseover="this.style.color='var(--text-heading)'" onmouseout="this.style.color='var(--text-muted)'"><span data-i18n="nav.pricing">Prijzen</span></a>
+      <a href="#contact" class="text-sm font-medium" style="color:var(--text-muted)" onmouseover="this.style.color='var(--text-heading)'" onmouseout="this.style.color='var(--text-muted)'"><span data-i18n="nav.contact">Contact</span></a>
+    </div>
+    <!-- Right controls -->
+    <div class="flex items-center gap-2">
+      <!-- Theme toggle -->
+      <button id="theme-toggle" class="w-9 h-9 rounded-full flex items-center justify-center transition-colors" style="color:var(--text-muted)" title="Toggle theme" aria-label="Toggle theme">
+        <svg id="icon-sun" class="w-[18px] h-[18px] hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+        <svg id="icon-moon" class="w-[18px] h-[18px]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+      </button>
+      <!-- Language switcher -->
+      <div class="lang-dropdown" id="lang-dropdown">
+        <button id="lang-btn" class="h-9 px-3 rounded-full flex items-center gap-1.5 text-sm font-medium transition-colors" style="color:var(--text-muted)" aria-label="Language">
+          <img id="lang-flag" src="https://flagcdn.com/w40/nl.png" alt="NL" class="w-5 h-auto rounded-sm" width="20" height="15"/>
+          <span id="lang-code" class="hidden sm:inline uppercase text-xs font-bold">NL</span>
+          <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div class="lang-menu" id="lang-menu">
+          <div class="lang-option active" data-lang="nl"><img src="https://flagcdn.com/w40/nl.png" alt="NL" class="w-5 h-auto rounded-sm" width="20" height="15"/> Nederlands</div>
+          <div class="lang-option" data-lang="en"><img src="https://flagcdn.com/w40/gb.png" alt="EN" class="w-5 h-auto rounded-sm" width="20" height="15"/> English</div>
+          <div class="lang-option" data-lang="es"><img src="https://flagcdn.com/w40/es.png" alt="ES" class="w-5 h-auto rounded-sm" width="20" height="15"/> Espa&ntilde;ol</div>
+          <div class="lang-option" data-lang="de"><img src="https://flagcdn.com/w40/de.png" alt="DE" class="w-5 h-auto rounded-sm" width="20" height="15"/> Deutsch</div>
+          <div class="lang-option" data-lang="fr"><img src="https://flagcdn.com/w40/fr.png" alt="FR" class="w-5 h-auto rounded-sm" width="20" height="15"/> Fran&ccedil;ais</div>
+        </div>
+      </div>
+      <!-- CTA -->
+      <a href="https://virelio.nl/" target="_blank" class="hidden sm:inline-flex items-center gap-2 px-5 py-2 rounded-full bg-spark-500 hover:bg-spark-600 text-white text-sm font-semibold transition-all hover:-translate-y-0.5 hover:shadow-lg hover:shadow-spark-500/25">
+        <span data-i18n="nav.cta">Bekijk Virelio.nl</span>
+        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+      </a>
+      <!-- Mobile hamburger -->
+      <button id="mobile-menu-btn" class="lg:hidden w-9 h-9 flex items-center justify-center" style="color:var(--text-muted)" aria-label="Menu">
+        <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+  </div>
+  <!-- Mobile dropdown -->
+  <div id="mobile-menu" class="lg:hidden hidden px-6 pb-4 space-y-3">
+    <a href="#hoe-het-werkt" class="block text-sm py-1" style="color:var(--text-muted)"><span data-i18n="nav.how">Zo Werkt Het</span></a>
+    <a href="#features" class="block text-sm py-1" style="color:var(--text-muted)"><span data-i18n="nav.features">Features</span></a>
+    <a href="#portfolio" class="block text-sm py-1" style="color:var(--text-muted)"><span data-i18n="nav.portfolio">Voorbeelden</span></a>
+    <a href="#pricing" class="block text-sm py-1" style="color:var(--text-muted)"><span data-i18n="nav.pricing">Prijzen</span></a>
+    <a href="#contact" class="block text-sm py-1" style="color:var(--text-muted)"><span data-i18n="nav.contact">Contact</span></a>
+  </div>
+</nav>
+
+
+<!-- ═══════════════════════════════════════════════════════════════════════
+     HERO
+     ═══════════════════════════════════════════════════════════════════ -->
+<section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden">
+  <canvas id="hero-canvas"></canvas>
+  <div class="hero-overlay"></div>
+  <div class="glow-orb glow-blue"></div>
+  <div class="glow-orb glow-purple"></div>
+  <div class="glow-orb glow-cyan"></div>
+
+  <div class="relative z-10 max-w-5xl mx-auto px-6 text-center pt-16">
+    <div data-reveal class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 mb-5">
+      <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+      <span class="text-sm text-white/60 font-medium" data-i18n="hero.badge">AI-powered webdesign voor ondernemers</span>
+    </div>
+
+    <h1 data-reveal class="font-display font-800 text-4xl sm:text-5xl lg:text-6xl xl:text-7xl leading-[1.08] tracking-tight text-white mb-3" style="transition-delay:.1s">
+      <span data-i18n="hero.title1">Professionele Websites,</span><br/>
+      <span class="text-gradient" data-i18n="hero.title2">Automatisch Gegenereerd</span>
+    </h1>
+
+    <!-- Typing effect line -->
+    <div data-reveal class="h-7 sm:h-9 flex items-center justify-center mb-5" style="transition-delay:.15s">
+      <span class="text-base sm:text-lg font-medium text-spark-400" id="typing-text"></span>
+      <span class="typing-cursor"></span>
+    </div>
+
+    <p data-reveal class="text-base sm:text-lg text-white/60 max-w-2xl mx-auto mb-7 leading-relaxed" style="transition-delay:.2s" data-i18n="hero.sub">
+      Wij vinden jouw bedrijf op Google Maps en genereren een op-maat gemaakte website — volledig automatisch. Bekijk jouw gratis preview binnen 24 uur.
+    </p>
+
+    <div data-reveal class="flex flex-col sm:flex-row items-center justify-center gap-3" style="transition-delay:.3s">
+      <a href="#pricing" class="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-full bg-spark-500 hover:bg-spark-600 text-white font-semibold text-base transition-all hover:-translate-y-1 hover:shadow-xl hover:shadow-spark-500/30">
+        <span data-i18n="hero.cta1">Bekijk Pakketten</span>
+        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+      </a>
+      <a href="#contact" class="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-full bg-white/5 hover:bg-white/10 text-white font-semibold text-base border border-white/15 transition-all hover:-translate-y-1 backdrop-blur-sm">
+        <span data-i18n="hero.cta2">Neem Contact Op</span>
+      </a>
+    </div>
+
+    <!-- Animated counters -->
+    <div data-reveal class="mt-10 flex flex-wrap items-center justify-center gap-6 sm:gap-12" style="transition-delay:.4s">
+      <div class="text-center"><div class="font-display font-800 text-2xl sm:text-3xl text-white counter" data-count="150">0</div><div class="text-xs sm:text-sm text-white/40 mt-1" data-i18n="hero.stat1">Bedrijven gescand</div></div>
+      <div class="w-px h-8 bg-white/10 hidden sm:block"></div>
+      <div class="text-center"><div class="font-display font-800 text-2xl sm:text-3xl text-white counter" data-count="7">0</div><div class="text-xs sm:text-sm text-white/40 mt-1" data-i18n="hero.stat2">Template stijlen</div></div>
+      <div class="w-px h-8 bg-white/10 hidden sm:block"></div>
+      <div class="text-center"><div class="font-display font-800 text-2xl sm:text-3xl text-white counter" data-count="24">0</div><div class="text-xs sm:text-sm text-white/40 mt-1" data-i18n="hero.stat3">Uur levertijd</div></div>
+      <div class="w-px h-8 bg-white/10 hidden sm:block"></div>
+      <div class="text-center"><div class="font-display font-800 text-2xl sm:text-3xl text-white">100%</div><div class="text-xs sm:text-sm text-white/40 mt-1" data-i18n="hero.stat4">Automatisch</div></div>
+    </div>
+  </div>
+
+  <div class="absolute bottom-6 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-1.5 opacity-50">
+    <span class="text-xs text-white/40 uppercase tracking-widest" data-i18n="hero.scroll">Scroll</span>
+    <div class="w-5 h-7 rounded-full border border-white/20 flex justify-center pt-1.5"><div class="w-1 h-2 rounded-full bg-white/40 animate-bounce"></div></div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════════════════
+     TRUST BAR
+     ═══════════════════════════════════════════════════════════════════ -->
+<section class="py-8 border-y" style="border-color:var(--border-subtle);background:var(--bg-raised)">
+  <div class="max-w-5xl mx-auto px-6 flex flex-wrap items-center justify-center gap-x-10 gap-y-3">
+    <span class="text-xs font-semibold uppercase tracking-[.15em]" style="color:var(--text-faint)" data-i18n="trust.label">Vertrouwd door bedrijven in</span>
+    <div class="flex items-center gap-8 text-sm font-medium" style="color:var(--text-muted)">
+      <span>Amsterdam</span><span>Rotterdam</span><span>Utrecht</span><span>Den Haag</span><span class="hidden sm:inline">Eindhoven</span><span class="hidden md:inline">Groningen</span>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════════════════
+     HOW IT WORKS
+     ═══════════════════════════════════════════════════════════════════ -->
+<section id="hoe-het-werkt" class="relative py-28 sm:py-36 section-glow" style="background:var(--bg-base)">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="text-center mb-20">
+      <p data-reveal class="text-sm font-semibold uppercase tracking-[.2em] text-spark-400 mb-4" data-i18n="steps.label">Zo Werkt Het</p>
+      <h2 data-reveal class="font-display font-800 text-4xl sm:text-5xl" style="transition-delay:.1s"><span data-i18n="steps.title1">In drie stappen naar</span><br/><span class="text-gradient" data-i18n="steps.title2">jouw professionele website</span></h2>
+    </div>
+    <div class="grid md:grid-cols-3 gap-8 md:gap-6 relative">
+      <div class="hidden md:block absolute top-16 left-[calc(16.67%+2rem)] right-[calc(16.67%+2rem)] h-[2px]" style="background:linear-gradient(90deg,#2f6fff,#7c3aed,#06b6d4);opacity:.25"></div>
+
+      <!-- Step 1 -->
+      <div data-reveal class="relative text-center" style="transition-delay:.1s">
+        <div class="relative inline-flex items-center justify-center w-32 h-32 mb-8">
+          <div class="absolute inset-0 rounded-full border-2 border-spark-500/30 animate-[spin_12s_linear_infinite]"></div>
+          <div class="absolute inset-2 rounded-full border border-spark-500/15 animate-[spin_18s_linear_infinite_reverse]"></div>
+          <div class="w-20 h-20 rounded-2xl bg-gradient-to-br from-spark-500 to-spark-700 flex items-center justify-center shadow-lg shadow-spark-500/25">
+            <svg class="w-10 h-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+          </div>
+          <div class="absolute -top-1 -right-1 w-8 h-8 rounded-full border-2 border-spark-500 flex items-center justify-center font-display font-bold text-sm text-spark-400" style="background:var(--bg-base)">1</div>
+        </div>
+        <h3 class="font-display font-700 text-xl mb-3" data-i18n="steps.s1.title">Scannen</h3>
+        <p style="color:var(--text-muted)" class="leading-relaxed max-w-xs mx-auto" data-i18n="steps.s1.desc">Wij doorzoeken Google Maps en vinden jouw bedrijf. Naam, adres, reviews, foto's — alles wordt automatisch verzameld.</p>
+      </div>
+      <!-- Step 2 -->
+      <div data-reveal class="relative text-center" style="transition-delay:.25s">
+        <div class="relative inline-flex items-center justify-center w-32 h-32 mb-8">
+          <div class="absolute inset-0 rounded-full border-2 border-violet-500/30 animate-[spin_14s_linear_infinite_reverse]"></div>
+          <div class="absolute inset-2 rounded-full border border-violet-500/15 animate-[spin_20s_linear_infinite]"></div>
+          <div class="w-20 h-20 rounded-2xl bg-gradient-to-br from-violet-500 to-violet-700 flex items-center justify-center shadow-lg shadow-violet-500/25 animate-float-slow">
+            <svg class="w-10 h-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.53 16.122a3 3 0 00-5.78 1.128 2.25 2.25 0 01-2.4 2.245 4.5 4.5 0 008.4-2.245c0-.399-.078-.78-.22-1.128zm0 0a15.998 15.998 0 003.388-1.62m-5.043-.025a15.994 15.994 0 011.622-3.395m3.42 3.42a15.995 15.995 0 004.764-4.648l3.876-5.814a1.151 1.151 0 00-1.597-1.597L14.146 6.32a15.996 15.996 0 00-4.649 4.763m3.42 3.42a6.776 6.776 0 00-3.42-3.42"/></svg>
+          </div>
+          <div class="absolute -top-1 -right-1 w-8 h-8 rounded-full border-2 border-violet-500 flex items-center justify-center font-display font-bold text-sm text-violet-400" style="background:var(--bg-base)">2</div>
+        </div>
+        <h3 class="font-display font-700 text-xl mb-3" data-i18n="steps.s2.title">Ontwerpen</h3>
+        <p style="color:var(--text-muted)" class="leading-relaxed max-w-xs mx-auto" data-i18n="steps.s2.desc">AI analyseert jouw merk, kiest het perfecte template en genereert een complete website met jouw kleuren, reviews en foto's.</p>
+      </div>
+      <!-- Step 3 -->
+      <div data-reveal class="relative text-center" style="transition-delay:.4s">
+        <div class="relative inline-flex items-center justify-center w-32 h-32 mb-8">
+          <div class="absolute inset-0 rounded-full border-2 border-cyan-500/30 animate-[spin_10s_linear_infinite]"></div>
+          <div class="absolute inset-2 rounded-full border border-cyan-500/15 animate-[spin_16s_linear_infinite_reverse]"></div>
+          <div class="w-20 h-20 rounded-2xl bg-gradient-to-br from-cyan-500 to-cyan-700 flex items-center justify-center shadow-lg shadow-cyan-500/25 animate-float-delay">
+            <svg class="w-10 h-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15.59 14.37a6 6 0 01-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 006.16-12.12A14.98 14.98 0 009.631 8.41m5.96 5.96a14.926 14.926 0 01-5.841 2.58m-.119-8.54a6 6 0 00-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 00-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 01-2.448-2.448 14.9 14.9 0 01.06-.312m-2.24 2.39a4.493 4.493 0 00-1.757 4.306 4.493 4.493 0 004.306-1.758M16.5 9a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z"/></svg>
+          </div>
+          <div class="absolute -top-1 -right-1 w-8 h-8 rounded-full border-2 border-cyan-500 flex items-center justify-center font-display font-bold text-sm text-cyan-400" style="background:var(--bg-base)">3</div>
+        </div>
+        <h3 class="font-display font-700 text-xl mb-3" data-i18n="steps.s3.title">Lanceren</h3>
+        <p style="color:var(--text-muted)" class="leading-relaxed max-w-xs mx-auto" data-i18n="steps.s3.desc">Je ontvangt een preview-link. Tevreden? Dan gaat jouw website direct live met een eigen domeinnaam.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════════════════
+     FEATURES
+     ═══════════════════════════════════════════════════════════════════ -->
+<section id="features" class="relative py-28 sm:py-36 section-glow" style="background:var(--bg-raised)">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="text-center mb-20">
+      <p data-reveal class="text-sm font-semibold uppercase tracking-[.2em] text-spark-400 mb-4" data-i18n="feat.label">Wat Maakt Ons Uniek</p>
+      <h2 data-reveal class="font-display font-800 text-4xl sm:text-5xl" style="transition-delay:.1s" data-i18n="feat.title">Alles wat jouw bedrijf online nodig heeft</h2>
+    </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      <div data-reveal class="feature-card" style="transition-delay:.05s">
+        <div class="w-12 h-12 rounded-xl bg-spark-500/15 flex items-center justify-center mb-5"><svg class="w-6 h-6 text-spark-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.455 2.456L21.75 6l-1.036.259a3.375 3.375 0 00-2.455 2.456z"/></svg></div>
+        <h3 class="font-display font-700 text-lg mb-2" data-i18n="feat.f1.t">AI-Gegenereerde Content</h3>
+        <p style="color:var(--text-muted)" class="text-sm leading-relaxed" data-i18n="feat.f1.d">Professionele teksten specifiek geschreven voor jouw branche en diensten. Geen templates — echt maatwerk.</p>
+      </div>
+      <div data-reveal class="feature-card" style="transition-delay:.1s">
+        <div class="w-12 h-12 rounded-xl bg-violet-500/15 flex items-center justify-center mb-5"><svg class="w-6 h-6 text-violet-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.098 19.902a3.75 3.75 0 005.304 0l6.401-6.402M6.75 21A3.75 3.75 0 013 17.25V4.125C3 3.504 3.504 3 4.125 3h5.25c.621 0 1.125.504 1.125 1.125v4.072M6.75 21a3.75 3.75 0 003.75-3.75V8.197M6.75 21h13.125c.621 0 1.125-.504 1.125-1.125v-5.25c0-.621-.504-1.125-1.125-1.125h-4.072M10.5 8.197l2.88-2.88c.438-.439 1.15-.439 1.59 0l3.712 3.713c.44.44.44 1.152 0 1.59l-2.879 2.88M6.75 17.25h.008v.008H6.75v-.008z"/></svg></div>
+        <h3 class="font-display font-700 text-lg mb-2" data-i18n="feat.f2.t">Automatische Huisstijl</h3>
+        <p style="color:var(--text-muted)" class="text-sm leading-relaxed" data-i18n="feat.f2.d">Jouw logo-kleuren worden automatisch herkend en doorgevoerd in het hele ontwerp. Herkenbaar en consistent.</p>
+      </div>
+      <div data-reveal class="feature-card" style="transition-delay:.15s">
+        <div class="w-12 h-12 rounded-xl bg-cyan-500/15 flex items-center justify-center mb-5"><svg class="w-6 h-6 text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"/></svg></div>
+        <h3 class="font-display font-700 text-lg mb-2" data-i18n="feat.f3.t">Google Reviews Integratie</h3>
+        <p style="color:var(--text-muted)" class="text-sm leading-relaxed" data-i18n="feat.f3.d">Jouw beste Google-beoordelingen direct op de website. Laat nieuwe klanten zien wat anderen over je zeggen.</p>
+      </div>
+      <div data-reveal class="feature-card" style="transition-delay:.2s">
+        <div class="w-12 h-12 rounded-xl bg-emerald-500/15 flex items-center justify-center mb-5"><svg class="w-6 h-6 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10.5 1.5H8.25A2.25 2.25 0 006 3.75v16.5a2.25 2.25 0 002.25 2.25h7.5A2.25 2.25 0 0018 20.25V3.75a2.25 2.25 0 00-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3"/></svg></div>
+        <h3 class="font-display font-700 text-lg mb-2" data-i18n="feat.f4.t">Mobiel-Vriendelijk</h3>
+        <p style="color:var(--text-muted)" class="text-sm leading-relaxed" data-i18n="feat.f4.d">Elk design is responsive — perfect weergegeven op telefoon, tablet en desktop. Geen compromissen.</p>
+      </div>
+      <div data-reveal class="feature-card" style="transition-delay:.25s">
+        <div class="w-12 h-12 rounded-xl bg-amber-500/15 flex items-center justify-center mb-5"><svg class="w-6 h-6 text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.75 6A2.25 2.25 0 016 3.75h2.25A2.25 2.25 0 0110.5 6v2.25a2.25 2.25 0 01-2.25 2.25H6a2.25 2.25 0 01-2.25-2.25V6zM3.75 15.75A2.25 2.25 0 016 13.5h2.25a2.25 2.25 0 012.25 2.25V18a2.25 2.25 0 01-2.25 2.25H6A2.25 2.25 0 013.75 18v-2.25zM13.5 6a2.25 2.25 0 012.25-2.25H18A2.25 2.25 0 0120.25 6v2.25A2.25 2.25 0 0118 10.5h-2.25a2.25 2.25 0 01-2.25-2.25V6zM13.5 15.75a2.25 2.25 0 012.25-2.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-2.25A2.25 2.25 0 0113.5 18v-2.25z"/></svg></div>
+        <h3 class="font-display font-700 text-lg mb-2" data-i18n="feat.f5.t">7+ Template Stijlen</h3>
+        <p style="color:var(--text-muted)" class="text-sm leading-relaxed" data-i18n="feat.f5.d">Van trendy tot elegant, van klinisch tot stoer. AI kiest het ontwerp dat het beste past bij jouw branche.</p>
+      </div>
+      <div data-reveal class="feature-card" style="transition-delay:.3s">
+        <div class="w-12 h-12 rounded-xl bg-rose-500/15 flex items-center justify-center mb-5"><svg class="w-6 h-6 text-rose-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941"/></svg></div>
+        <h3 class="font-display font-700 text-lg mb-2" data-i18n="feat.f6.t">SEO Geoptimaliseerd</h3>
+        <p style="color:var(--text-muted)" class="text-sm leading-relaxed" data-i18n="feat.f6.d">Vindbaar in Google vanaf dag één. Meta-tags, snelle laadtijden en gestructureerde content voor betere rankings.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════════════════
+     PORTFOLIO
+     ═══════════════════════════════════════════════════════════════════ -->
+<section id="portfolio" class="relative py-28 sm:py-36 section-glow" style="background:var(--bg-base)">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="text-center mb-20">
+      <p data-reveal class="text-sm font-semibold uppercase tracking-[.2em] text-spark-400 mb-4" data-i18n="port.label">Voorbeelden</p>
+      <h2 data-reveal class="font-display font-800 text-4xl sm:text-5xl" style="transition-delay:.1s" data-i18n="port.title">Bekijk wat wij voor jouw bedrijf kunnen maken</h2>
+    </div>
+    <!-- Mockup 1 -->
+    <div class="grid lg:grid-cols-2 gap-10 lg:gap-16 mb-16 items-center">
+      <div data-reveal="slide-left" class="device-perspective">
+        <div class="device-frame">
+          <div class="browser-chrome"><div class="browser-dot" style="background:#ff5f57"></div><div class="browser-dot" style="background:#febc2e"></div><div class="browser-dot" style="background:#28c840"></div><div class="browser-bar"><svg class="w-3 h-3 mr-1.5" style="color:var(--browser-text)" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"/></svg>virelio.nl/site/de-gouden-schaar</div></div>
+          <div class="rounded-b-xl overflow-hidden" style="background:linear-gradient(135deg,#1a1a2e,#16213e)">
+            <div class="p-8 sm:p-10 min-h-[320px] relative">
+              <div class="absolute inset-0 opacity-30" style="background:url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 300%22><rect fill=%22%23c8a96e%22 x=%220%22 y=%220%22 width=%22400%22 height=%22300%22 rx=%220%22 opacity=%220.1%22/><circle cx=%22320%22 cy=%2260%22 r=%2280%22 fill=%22%23c8a96e%22 opacity=%220.08%22/></svg>') center/cover"></div>
+              <div class="relative z-10">
+                <div class="inline-block px-3 py-1 rounded-full text-[10px] font-semibold uppercase tracking-wider mb-4" style="background:rgba(200,169,110,.15);color:#c8a96e">Kapsalon</div>
+                <h3 class="font-display font-800 text-2xl sm:text-3xl text-white mb-3">De Gouden Schaar</h3>
+                <p class="text-sm text-gray-400 mb-6 max-w-sm">De beste kapper van Amsterdam-Oost. Meer dan 150 tevreden klanten en 4.8 sterren op Google.</p>
+                <div class="flex items-center gap-3 mb-6"><div class="flex text-amber-400 text-sm">&#9733;&#9733;&#9733;&#9733;&#9733;</div><span class="text-xs text-gray-500">4.8 (156 reviews)</span></div>
+                <div class="flex gap-3"><div class="px-5 py-2 rounded-full text-sm font-semibold" style="background:#c8a96e;color:#1a1a2e">Maak Afspraak</div><div class="px-5 py-2 rounded-full text-sm font-semibold border border-white/20 text-white/70">Bekijk Menu</div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-reveal="slide-right">
+        <div class="inline-block px-3 py-1.5 rounded-full bg-amber-500/10 text-amber-400 text-xs font-semibold uppercase tracking-wider mb-4" data-i18n="port.p1.badge">Elegant Template</div>
+        <h3 class="font-display font-700 text-2xl mb-4" data-i18n="port.p1.title">Kapperszaken &amp; Schoonheidssalons</h3>
+        <p style="color:var(--text-muted)" class="leading-relaxed mb-6" data-i18n="port.p1.desc">Elegante, donkere designs met gouden accenten. Perfect voor kappers, barbershops en beauty-salons die een premium uitstraling willen.</p>
+        <ul class="space-y-3"><li class="flex items-start gap-3 text-sm" style="color:var(--text-muted)"><span class="w-5 h-5 rounded-full bg-spark-500/15 flex items-center justify-center flex-shrink-0 mt-0.5"><svg class="w-3 h-3 text-spark-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg></span><span data-i18n="port.p1.c1">Automatisch herkende merkkleur (goud)</span></li><li class="flex items-start gap-3 text-sm" style="color:var(--text-muted)"><span class="w-5 h-5 rounded-full bg-spark-500/15 flex items-center justify-center flex-shrink-0 mt-0.5"><svg class="w-3 h-3 text-spark-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg></span><span data-i18n="port.p1.c2">156 Google Reviews geïntegreerd</span></li><li class="flex items-start gap-3 text-sm" style="color:var(--text-muted)"><span class="w-5 h-5 rounded-full bg-spark-500/15 flex items-center justify-center flex-shrink-0 mt-0.5"><svg class="w-3 h-3 text-spark-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg></span><span data-i18n="port.p1.c3">AI-geschreven diensten &amp; beschrijvingen</span></li></ul>
+      </div>
+    </div>
+    <!-- Mockup 2 -->
+    <div class="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+      <div data-reveal="slide-left" class="order-2 lg:order-1">
+        <div class="inline-block px-3 py-1.5 rounded-full bg-sky-500/10 text-sky-400 text-xs font-semibold uppercase tracking-wider mb-4" data-i18n="port.p2.badge">Modern Template</div>
+        <h3 class="font-display font-700 text-2xl mb-4" data-i18n="port.p2.title">Tandartsen &amp; Klinieken</h3>
+        <p style="color:var(--text-muted)" class="leading-relaxed mb-6" data-i18n="port.p2.desc">Schone, vertrouwenwekkende designs met een professionele uitstraling. Ideaal voor medische praktijken en fysiotherapeuten.</p>
+        <ul class="space-y-3"><li class="flex items-start gap-3 text-sm" style="color:var(--text-muted)"><span class="w-5 h-5 rounded-full bg-spark-500/15 flex items-center justify-center flex-shrink-0 mt-0.5"><svg class="w-3 h-3 text-spark-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg></span><span data-i18n="port.p2.c1">Vertrouwenwekkende blauwe kleurpaletten</span></li><li class="flex items-start gap-3 text-sm" style="color:var(--text-muted)"><span class="w-5 h-5 rounded-full bg-spark-500/15 flex items-center justify-center flex-shrink-0 mt-0.5"><svg class="w-3 h-3 text-spark-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg></span><span data-i18n="port.p2.c2">Openingstijden &amp; locatie prominent</span></li><li class="flex items-start gap-3 text-sm" style="color:var(--text-muted)"><span class="w-5 h-5 rounded-full bg-spark-500/15 flex items-center justify-center flex-shrink-0 mt-0.5"><svg class="w-3 h-3 text-spark-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg></span><span data-i18n="port.p2.c3">Behandelingen met duidelijke beschrijvingen</span></li></ul>
+      </div>
+      <div data-reveal="slide-right" class="device-perspective order-1 lg:order-2">
+        <div class="device-frame-right">
+          <div class="browser-chrome"><div class="browser-dot" style="background:#ff5f57"></div><div class="browser-dot" style="background:#febc2e"></div><div class="browser-dot" style="background:#28c840"></div><div class="browser-bar"><svg class="w-3 h-3 mr-1.5" style="color:var(--browser-text)" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"/></svg>virelio.nl/site/tandarts-de-jordaan</div></div>
+          <div class="rounded-b-xl overflow-hidden" style="background:linear-gradient(135deg,#f0f9ff,#e0f2fe)">
+            <div class="p-8 sm:p-10 min-h-[320px]">
+              <div class="inline-block px-3 py-1 rounded-full text-[10px] font-semibold uppercase tracking-wider mb-4" style="background:rgba(2,132,199,.1);color:#0284c7">Tandartspraktijk</div>
+              <h3 class="font-display font-800 text-2xl sm:text-3xl mb-3" style="color:#0f172a">Tandarts De Jordaan</h3>
+              <p class="text-sm mb-6 max-w-sm" style="color:#475569">Persoonlijke tandzorg in het hart van de Jordaan. Al 20 jaar uw vertrouwde tandarts.</p>
+              <div class="flex items-center gap-3 mb-6"><div class="flex text-amber-400 text-sm">&#9733;&#9733;&#9733;&#9733;&#9734;</div><span class="text-xs" style="color:#94a3b8">4.6 (89 reviews)</span></div>
+              <div class="grid grid-cols-3 gap-3 mb-6"><div class="rounded-xl p-3 text-center" style="background:white;box-shadow:0 1px 3px rgba(0,0,0,.05)"><div class="text-lg mb-0.5">🦷</div><div class="text-[10px] font-semibold" style="color:#0f172a">Controle</div></div><div class="rounded-xl p-3 text-center" style="background:white;box-shadow:0 1px 3px rgba(0,0,0,.05)"><div class="text-lg mb-0.5">✨</div><div class="text-[10px] font-semibold" style="color:#0f172a">Whitening</div></div><div class="rounded-xl p-3 text-center" style="background:white;box-shadow:0 1px 3px rgba(0,0,0,.05)"><div class="text-lg mb-0.5">🔧</div><div class="text-[10px] font-semibold" style="color:#0f172a">Vullingen</div></div></div>
+              <div class="flex gap-3"><div class="px-5 py-2 rounded-full text-sm font-semibold text-white" style="background:#0284c7">Maak Afspraak</div><div class="px-5 py-2 rounded-full text-sm font-semibold" style="border:1px solid #cbd5e1;color:#475569">Bel Ons</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════════════════
+     PRICING
+     ═══════════════════════════════════════════════════════════════════ -->
+<section id="pricing" class="relative py-28 sm:py-36 section-glow" style="background:var(--bg-raised)">
+  <div class="max-w-5xl mx-auto px-6">
+    <div class="text-center mb-16">
+      <p data-reveal class="text-sm font-semibold uppercase tracking-[.2em] text-spark-400 mb-4" data-i18n="price.label">Prijzen</p>
+      <h2 data-reveal class="font-display font-800 text-4xl sm:text-5xl mb-4" style="transition-delay:.1s" data-i18n="price.title">Eenvoudige, transparante prijzen</h2>
+      <p data-reveal style="color:var(--text-muted);transition-delay:.15s" data-i18n="price.sub">Start gratis. Upgrade wanneer je klaar bent om live te gaan.</p>
+      <!-- Toggle -->
+      <div data-reveal class="flex items-center justify-center gap-3 mt-8" style="transition-delay:.2s">
+        <span class="text-sm font-medium" style="color:var(--text-muted)" data-i18n="price.monthly">Maandelijks</span>
+        <div class="pricing-toggle" id="pricing-toggle"></div>
+        <span class="text-sm font-medium" style="color:var(--text-muted)" data-i18n="price.yearly">Jaarlijks</span>
+        <span class="text-xs font-bold text-emerald-400 bg-emerald-400/10 px-2 py-0.5 rounded-full" data-i18n="price.save">-20%</span>
+      </div>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-6">
+      <!-- Preview -->
+      <div data-reveal class="rounded-2xl p-8 flex flex-col" style="background:var(--bg-card);border:1px solid var(--bg-card-border);transition-delay:.1s">
+        <h3 class="font-display font-700 text-xl mb-2" data-i18n="price.t1.name">Preview</h3>
+        <div class="flex items-baseline gap-1 mb-1"><span class="font-display font-800 text-4xl" data-i18n="price.t1.price">Gratis</span></div>
+        <p class="text-sm mb-8" style="color:var(--text-muted)" data-i18n="price.t1.desc">Bekijk hoe jouw website eruitziet. Geen verplichtingen.</p>
+        <ul class="space-y-3 mb-8 flex-1">
+          <li class="flex items-center gap-2.5 text-sm" style="color:var(--text-base)"><svg class="w-4 h-4 text-emerald-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg><span data-i18n="price.t1.f1">AI-gegenereerde website preview</span></li>
+          <li class="flex items-center gap-2.5 text-sm" style="color:var(--text-base)"><svg class="w-4 h-4 text-emerald-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg><span data-i18n="price.t1.f2">Google Reviews integratie</span></li>
+          <li class="flex items-center gap-2.5 text-sm" style="color:var(--text-base)"><svg class="w-4 h-4 text-emerald-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg><span data-i18n="price.t1.f3">Mobiel-responsive design</span></li>
+          <li class="flex items-center gap-2.5 text-sm" style="color:var(--text-faint)"><svg class="w-4 h-4 flex-shrink-0" style="color:var(--text-faint)" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg><span data-i18n="price.t1.f4">Eigen domein</span></li>
+        </ul>
+        <a href="#contact" class="block text-center py-3.5 rounded-xl font-semibold text-sm transition-all hover:-translate-y-0.5" style="border:2px solid var(--bg-card-border);color:var(--text-heading)" data-i18n="price.t1.cta">Vraag Preview Aan</a>
+      </div>
+      <!-- Starter — popular -->
+      <div data-reveal class="rounded-2xl p-8 flex flex-col relative" style="background:var(--pricing-popular-bg);border:2px solid var(--pricing-popular-border);transition-delay:.2s">
+        <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-spark-500 text-white text-xs font-bold" data-i18n="price.popular">Meest Gekozen</div>
+        <h3 class="font-display font-700 text-xl mb-2" data-i18n="price.t2.name">Starter</h3>
+        <div class="flex items-baseline gap-1 mb-1"><span class="font-display font-800 text-4xl">&euro;</span><span class="font-display font-800 text-4xl price-amount" data-monthly="29" data-yearly="23">29</span><span class="text-sm" style="color:var(--text-muted)" data-i18n="price.permonth">/maand</span></div>
+        <p class="text-sm mb-8" style="color:var(--text-muted)" data-i18n="price.t2.desc">Jouw website live met hosting en ondersteuning.</p>
+        <ul class="space-y-3 mb-8 flex-1">
+          <li class="flex items-center gap-2.5 text-sm" style="color:var(--text-base)"><svg class="w-4 h-4 text-emerald-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg><span data-i18n="price.t2.f1">Alles uit Preview</span></li>
+          <li class="flex items-center gap-2.5 text-sm" style="color:var(--text-base)"><svg class="w-4 h-4 text-emerald-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg><span data-i18n="price.t2.f2">Website live &amp; gehost</span></li>
+          <li class="flex items-center gap-2.5 text-sm" style="color:var(--text-base)"><svg class="w-4 h-4 text-emerald-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg><span data-i18n="price.t2.f3">Gratis subdomein</span></li>
+          <li class="flex items-center gap-2.5 text-sm" style="color:var(--text-base)"><svg class="w-4 h-4 text-emerald-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg><span data-i18n="price.t2.f4">SSL-certificaat</span></li>
+          <li class="flex items-center gap-2.5 text-sm" style="color:var(--text-base)"><svg class="w-4 h-4 text-emerald-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg><span data-i18n="price.t2.f5">E-mail support</span></li>
+        </ul>
+        <a href="#contact" class="block text-center py-3.5 rounded-xl font-semibold text-sm bg-spark-500 hover:bg-spark-600 text-white transition-all hover:-translate-y-0.5 hover:shadow-lg hover:shadow-spark-500/25" data-i18n="price.t2.cta">Start Nu</a>
+      </div>
+      <!-- Professional -->
+      <div data-reveal class="rounded-2xl p-8 flex flex-col" style="background:var(--bg-card);border:1px solid var(--bg-card-border);transition-delay:.3s">
+        <h3 class="font-display font-700 text-xl mb-2" data-i18n="price.t3.name">Professional</h3>
+        <div class="flex items-baseline gap-1 mb-1"><span class="font-display font-800 text-4xl">&euro;</span><span class="font-display font-800 text-4xl price-amount" data-monthly="49" data-yearly="39">49</span><span class="text-sm" style="color:var(--text-muted)" data-i18n="price.permonth">/maand</span></div>
+        <p class="text-sm mb-8" style="color:var(--text-muted)" data-i18n="price.t3.desc">Alles voor een volledige online aanwezigheid.</p>
+        <ul class="space-y-3 mb-8 flex-1">
+          <li class="flex items-center gap-2.5 text-sm" style="color:var(--text-base)"><svg class="w-4 h-4 text-emerald-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg><span data-i18n="price.t3.f1">Alles uit Starter</span></li>
+          <li class="flex items-center gap-2.5 text-sm" style="color:var(--text-base)"><svg class="w-4 h-4 text-emerald-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg><span data-i18n="price.t3.f2">Eigen domeinnaam (.nl)</span></li>
+          <li class="flex items-center gap-2.5 text-sm" style="color:var(--text-base)"><svg class="w-4 h-4 text-emerald-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg><span data-i18n="price.t3.f3">Professioneel e-mailadres</span></li>
+          <li class="flex items-center gap-2.5 text-sm" style="color:var(--text-base)"><svg class="w-4 h-4 text-emerald-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg><span data-i18n="price.t3.f4">Google Analytics</span></li>
+          <li class="flex items-center gap-2.5 text-sm" style="color:var(--text-base)"><svg class="w-4 h-4 text-emerald-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg><span data-i18n="price.t3.f5">Prioriteit support</span></li>
+          <li class="flex items-center gap-2.5 text-sm" style="color:var(--text-base)"><svg class="w-4 h-4 text-emerald-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg><span data-i18n="price.t3.f6">Maandelijkse content updates</span></li>
+        </ul>
+        <a href="#contact" class="block text-center py-3.5 rounded-xl font-semibold text-sm transition-all hover:-translate-y-0.5" style="border:2px solid var(--bg-card-border);color:var(--text-heading)" data-i18n="price.t3.cta">Neem Contact Op</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════════════════
+     TESTIMONIALS
+     ═══════════════════════════════════════════════════════════════════ -->
+<section class="relative py-28 sm:py-36 section-glow" style="background:var(--bg-base)">
+  <div class="max-w-5xl mx-auto px-6">
+    <div class="text-center mb-16">
+      <p data-reveal class="text-sm font-semibold uppercase tracking-[.2em] text-spark-400 mb-4" data-i18n="testi.label">Klanten Aan Het Woord</p>
+      <h2 data-reveal class="font-display font-800 text-4xl sm:text-5xl" style="transition-delay:.1s" data-i18n="testi.title">Wat ondernemers over ons zeggen</h2>
+    </div>
+    <div data-reveal class="relative overflow-hidden" style="transition-delay:.2s">
+      <div id="testi-track" class="flex transition-transform duration-500 ease-out">
+        <!-- Testimonial 1 -->
+        <div class="w-full flex-shrink-0 px-2">
+          <div class="rounded-2xl p-8 sm:p-10 max-w-2xl mx-auto" style="background:var(--testimonial-bg);border:1px solid var(--testimonial-border)">
+            <div class="flex text-amber-400 text-lg mb-4">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p class="text-lg leading-relaxed mb-6" style="color:var(--text-base)" data-i18n="testi.t1.text">"Ik kon niet geloven hoe snel mijn website er was. Binnen een dag had ik een professionele site die er beter uitziet dan wat ik zelf in weken had kunnen maken. Mijn klanten zijn onder de indruk!"</p>
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 rounded-full bg-gradient-to-br from-amber-400 to-orange-500 flex items-center justify-center font-display font-bold text-white text-lg">M</div>
+              <div><div class="font-semibold" data-i18n="testi.t1.name">Mariam El-Fassi</div><div class="text-sm" style="color:var(--text-muted)" data-i18n="testi.t1.role">Eigenaar, Salon Goud — Amsterdam</div></div>
+            </div>
+          </div>
+        </div>
+        <!-- Testimonial 2 -->
+        <div class="w-full flex-shrink-0 px-2">
+          <div class="rounded-2xl p-8 sm:p-10 max-w-2xl mx-auto" style="background:var(--testimonial-bg);border:1px solid var(--testimonial-border)">
+            <div class="flex text-amber-400 text-lg mb-4">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p class="text-lg leading-relaxed mb-6" style="color:var(--text-base)" data-i18n="testi.t2.text">"Onze trattoria had nog nooit een website gehad. VirelioCreator maakte een prachtig design met onze foto's en menu. We krijgen nu reserveringen via de website — ongelooflijk!"</p>
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 rounded-full bg-gradient-to-br from-emerald-400 to-teal-500 flex items-center justify-center font-display font-bold text-white text-lg">L</div>
+              <div><div class="font-semibold" data-i18n="testi.t2.name">Luca Rossi</div><div class="text-sm" style="color:var(--text-muted)" data-i18n="testi.t2.role">Chef, Trattoria Bella — Rotterdam</div></div>
+            </div>
+          </div>
+        </div>
+        <!-- Testimonial 3 -->
+        <div class="w-full flex-shrink-0 px-2">
+          <div class="rounded-2xl p-8 sm:p-10 max-w-2xl mx-auto" style="background:var(--testimonial-bg);border:1px solid var(--testimonial-border)">
+            <div class="flex text-amber-400 text-lg mb-4">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
+            <p class="text-lg leading-relaxed mb-6" style="color:var(--text-base)" data-i18n="testi.t3.text">"Als tandarts heb ik geen tijd om een website te bouwen. VirelioCreator deed het automatisch — met mijn reviews, openingstijden en behandelingen. Mijn patiënten vinden het overzichtelijk en professioneel."</p>
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 rounded-full bg-gradient-to-br from-sky-400 to-blue-500 flex items-center justify-center font-display font-bold text-white text-lg">D</div>
+              <div><div class="font-semibold" data-i18n="testi.t3.name">Dr. David van der Berg</div><div class="text-sm" style="color:var(--text-muted)" data-i18n="testi.t3.role">Tandarts, Praktijk De Jordaan — Utrecht</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Dots -->
+      <div class="flex justify-center gap-2 mt-8" id="testi-dots">
+        <div class="testi-dot active" data-slide="0"></div>
+        <div class="testi-dot" data-slide="1"></div>
+        <div class="testi-dot" data-slide="2"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════════════════
+     FAQ
+     ═══════════════════════════════════════════════════════════════════ -->
+<section id="faq" class="relative py-28 sm:py-36 section-glow" style="background:var(--bg-raised)">
+  <div class="max-w-3xl mx-auto px-6">
+    <div class="text-center mb-16">
+      <p data-reveal class="text-sm font-semibold uppercase tracking-[.2em] text-spark-400 mb-4" data-i18n="faq.label">Veelgestelde Vragen</p>
+      <h2 data-reveal class="font-display font-800 text-4xl sm:text-5xl" style="transition-delay:.1s" data-i18n="faq.title">Alles wat je wilt weten</h2>
+    </div>
+    <div data-reveal class="space-y-3" style="transition-delay:.2s">
+      <div class="faq-item"><div class="faq-header"><span class="font-semibold" data-i18n="faq.q1">Hoe werkt het precies?</span><svg class="w-5 h-5" style="color:var(--text-muted)" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></div><div class="faq-body"><div class="faq-body-inner text-sm leading-relaxed" style="color:var(--text-muted)" data-i18n="faq.a1">Wij zoeken jouw bedrijf op Google Maps, verzamelen automatisch alle informatie (naam, adres, reviews, foto's, openingstijden) en gebruiken AI om een professionele website te genereren die perfect bij jouw merk past. Je ontvangt een preview-link per e-mail.</div></div></div>
+      <div class="faq-item"><div class="faq-header"><span class="font-semibold" data-i18n="faq.q2">Wat kost het?</span><svg class="w-5 h-5" style="color:var(--text-muted)" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></div><div class="faq-body"><div class="faq-body-inner text-sm leading-relaxed" style="color:var(--text-muted)" data-i18n="faq.a2">De preview is volledig gratis en vrijblijvend. Wil je de website live zetten? Dan begint het Starter-pakket bij €29 per maand inclusief hosting. Het Professional-pakket (€49/maand) bevat een eigen domeinnaam en e-mailadres.</div></div></div>
+      <div class="faq-item"><div class="faq-header"><span class="font-semibold" data-i18n="faq.q3">Hoe lang duurt het?</span><svg class="w-5 h-5" style="color:var(--text-muted)" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></div><div class="faq-body"><div class="faq-body-inner text-sm leading-relaxed" style="color:var(--text-muted)" data-i18n="faq.a3">Jouw website wordt binnen 24 uur gegenereerd. Het volledige proces — van scan tot preview — is automatisch. Zodra je tevreden bent, kan je website dezelfde dag nog live.</div></div></div>
+      <div class="faq-item"><div class="faq-header"><span class="font-semibold" data-i18n="faq.q4">Kan ik de website aanpassen?</span><svg class="w-5 h-5" style="color:var(--text-muted)" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></div><div class="faq-body"><div class="faq-body-inner text-sm leading-relaxed" style="color:var(--text-muted)" data-i18n="faq.a4">Ja! Na het genereren kun je wijzigingen doorgeven. Denk aan tekstaanpassingen, extra foto's of een ander kleurenschema. Bij het Professional-pakket krijg je maandelijkse content updates.</div></div></div>
+      <div class="faq-item"><div class="faq-header"><span class="font-semibold" data-i18n="faq.q5">Is er een contract of opzegtermijn?</span><svg class="w-5 h-5" style="color:var(--text-muted)" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></div><div class="faq-body"><div class="faq-body-inner text-sm leading-relaxed" style="color:var(--text-muted)" data-i18n="faq.a5">Nee, je zit nergens aan vast. Je kunt maandelijks opzeggen. Bij jaarlijkse betaling krijg je 20% korting, maar ook dan kun je na het jaar stoppen zonder extra kosten.</div></div></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════════════════
+     CTA BANNER
+     ═══════════════════════════════════════════════════════════════════ -->
+<section class="relative py-24 overflow-hidden">
+  <div class="absolute inset-0" style="background:linear-gradient(135deg,#1a3a8a,#7c3aed 50%,#2f6fff)"></div>
+  <div class="absolute top-0 right-0 w-96 h-96 rounded-full bg-white/5 -translate-y-1/2 translate-x-1/2"></div>
+  <div class="absolute bottom-0 left-0 w-72 h-72 rounded-full bg-white/5 translate-y-1/2 -translate-x-1/2"></div>
+  <div class="relative z-10 max-w-4xl mx-auto px-6 text-center">
+    <h2 data-reveal class="font-display font-800 text-3xl sm:text-5xl text-white mb-6" data-i18n="cta.title">Klaar om jouw bedrijf online te brengen?</h2>
+    <p data-reveal class="text-lg text-white/70 mb-10 max-w-xl mx-auto" style="transition-delay:.1s" data-i18n="cta.desc">Vraag nu een gratis preview aan en bekijk binnen 24 uur hoe jouw professionele website eruitziet. Geen verplichtingen.</p>
+    <div data-reveal class="flex flex-col sm:flex-row items-center justify-center gap-4" style="transition-delay:.2s">
+      <a href="https://virelio.nl/" target="_blank" class="inline-flex items-center gap-2.5 px-8 py-4 rounded-full bg-white text-ink-900 font-semibold text-lg transition-all hover:-translate-y-1 hover:shadow-xl">
+        <span data-i18n="cta.primary">Bekijk Virelio.nl</span><svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+      </a>
+      <a href="#contact" class="inline-flex items-center gap-2.5 px-8 py-4 rounded-full bg-transparent text-white font-semibold text-lg border border-white/20 transition-all hover:-translate-y-1 hover:bg-white/10 backdrop-blur-sm">
+        <span data-i18n="cta.secondary">Neem Contact Op</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════════════════
+     CONTACT
+     ═══════════════════════════════════════════════════════════════════ -->
+<section id="contact" class="relative py-28 sm:py-36 section-glow" style="background:var(--bg-base)">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="grid lg:grid-cols-2 gap-16">
+      <div>
+        <p data-reveal class="text-sm font-semibold uppercase tracking-[.2em] text-spark-400 mb-4" data-i18n="contact.label">Neem Contact Op</p>
+        <h2 data-reveal class="font-display font-800 text-4xl sm:text-5xl mb-6" style="transition-delay:.1s" data-i18n="contact.title">Vragen? Wij helpen je graag.</h2>
+        <p data-reveal style="color:var(--text-muted);transition-delay:.2s" class="leading-relaxed mb-10" data-i18n="contact.desc">Benieuwd wat wij voor jouw bedrijf kunnen betekenen? Stuur ons een bericht of neem direct contact op. We reageren altijd binnen 24 uur.</p>
+        <div data-reveal class="space-y-6" style="transition-delay:.3s">
+          <div class="flex items-start gap-4"><div class="w-12 h-12 rounded-xl bg-spark-500/15 flex items-center justify-center flex-shrink-0"><svg class="w-5 h-5 text-spark-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/></svg></div><div><div class="text-sm" style="color:var(--text-muted)" data-i18n="contact.emailLabel">E-mail</div><a href="mailto:info@virelio.nl" class="font-medium hover:text-spark-400 transition-colors" style="color:var(--text-heading)">info@virelio.nl</a></div></div>
+          <div class="flex items-start gap-4"><div class="w-12 h-12 rounded-xl bg-violet-500/15 flex items-center justify-center flex-shrink-0"><svg class="w-5 h-5 text-violet-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"/></svg></div><div><div class="text-sm" style="color:var(--text-muted)" data-i18n="contact.phoneLabel">Telefoon</div><a href="tel:+31612345678" class="font-medium hover:text-violet-400 transition-colors" style="color:var(--text-heading)">+31 6 1234 5678</a></div></div>
+          <div class="flex items-start gap-4"><div class="w-12 h-12 rounded-xl bg-cyan-500/15 flex items-center justify-center flex-shrink-0"><svg class="w-5 h-5 text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/></svg></div><div><div class="text-sm" style="color:var(--text-muted)" data-i18n="contact.locLabel">Locatie</div><span class="font-medium" style="color:var(--text-heading)">Amsterdam, Nederland</span></div></div>
+        </div>
+      </div>
+      <div data-reveal="slide-right">
+        <form id="contact-form" class="space-y-5 p-8 sm:p-10 rounded-2xl" style="background:var(--bg-card);border:1px solid var(--bg-card-border)">
+          <div class="grid sm:grid-cols-2 gap-5">
+            <div><label class="block text-sm font-medium mb-2" style="color:var(--text-muted)" data-i18n="form.name">Naam *</label><input type="text" name="name" required class="form-input" data-i18n-ph="form.namePh" placeholder="Jouw naam"/></div>
+            <div><label class="block text-sm font-medium mb-2" style="color:var(--text-muted)" data-i18n="form.biz">Bedrijfsnaam</label><input type="text" name="business" class="form-input" data-i18n-ph="form.bizPh" placeholder="Jouw bedrijfsnaam"/></div>
+          </div>
+          <div><label class="block text-sm font-medium mb-2" style="color:var(--text-muted)" data-i18n="form.email">E-mail *</label><input type="email" name="email" required class="form-input" data-i18n-ph="form.emailPh" placeholder="jouw@email.nl"/></div>
+          <div><label class="block text-sm font-medium mb-2" style="color:var(--text-muted)" data-i18n="form.phone">Telefoon</label><input type="tel" name="phone" class="form-input" data-i18n-ph="form.phonePh" placeholder="+31 6 ..."/></div>
+          <div><label class="block text-sm font-medium mb-2" style="color:var(--text-muted)" data-i18n="form.msg">Bericht *</label><textarea name="message" required rows="4" class="form-input" style="resize:vertical;min-height:120px" data-i18n-ph="form.msgPh" placeholder="Vertel ons over jouw bedrijf..."></textarea></div>
+          <button type="submit" id="contact-submit" class="w-full inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-xl bg-spark-500 hover:bg-spark-600 text-white font-semibold text-base transition-all hover:-translate-y-0.5 hover:shadow-lg hover:shadow-spark-500/25">
+            <span id="submit-text" data-i18n="form.submit">Verstuur Bericht</span>
+            <svg id="submit-arrow" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5"/></svg>
+            <svg id="submit-spinner" class="hidden w-5 h-5 animate-spin" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"/><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"/></svg>
+          </button>
+          <p class="text-xs text-center" style="color:var(--text-faint)" data-i18n="form.note">Wij reageren altijd binnen 24 uur. Geen spam, dat beloven we.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════════════════
+     FOOTER
+     ═══════════════════════════════════════════════════════════════════ -->
+<footer class="py-12 border-t" style="border-color:var(--border-subtle);background:var(--bg-footer);transition:background .4s">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="flex flex-col sm:flex-row items-center justify-between gap-6">
+      <a href="https://virelio.nl/" target="_blank" class="flex items-center gap-2.5"><div class="w-8 h-8 rounded-lg bg-gradient-to-br from-spark-500 to-violet-500 flex items-center justify-center font-display font-bold text-white text-sm">V</div><span class="font-display font-bold" style="color:var(--text-heading)">VirelioCreator</span></a>
+      <div class="flex items-center gap-6 text-sm" style="color:var(--text-muted)">
+        <a href="#hoe-het-werkt" class="hover:text-spark-400 transition-colors"><span data-i18n="nav.how">Zo Werkt Het</span></a>
+        <a href="#pricing" class="hover:text-spark-400 transition-colors"><span data-i18n="nav.pricing">Prijzen</span></a>
+        <a href="#faq" class="hover:text-spark-400 transition-colors"><span data-i18n="faq.label">FAQ</span></a>
+        <a href="#contact" class="hover:text-spark-400 transition-colors"><span data-i18n="nav.contact">Contact</span></a>
+      </div>
+      <div class="text-sm" style="color:var(--text-faint)">&copy; 2026 VirelioCreator</div>
+    </div>
+  </div>
+</footer>
+
+
+<!-- ── Floating CTA (mobile) ── -->
+<div id="floating-cta">
+  <a href="#contact" class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-spark-500 hover:bg-spark-600 text-white font-semibold text-sm shadow-xl shadow-spark-500/30 transition-all">
+    <span data-i18n="hero.cta2">Neem Contact Op</span>
+    <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+  </a>
+</div>
+
+<!-- ── Toast ── -->
+<div id="toast" class="toast"></div>
+
+
+<!-- ═══════════════════════════════════════════════════════════════════════
+     THREE.JS 3D HERO SCENE
+     ═══════════════════════════════════════════════════════════════════ -->
+<script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+<script>
+(function(){
+  try{
+  var c=document.getElementById('hero-canvas');if(!c)return;
+  var mob=window.innerWidth<768,pr=Math.min(devicePixelRatio,mob?1:2);
+  if(typeof THREE==='undefined'){console.warn('Three.js not loaded');return;}
+  var scene=new THREE.Scene(),cam=new THREE.PerspectiveCamera(60,innerWidth/innerHeight,.1,100);
+  cam.position.set(0,0,6);
+  var r=new THREE.WebGLRenderer({canvas:c,alpha:true,antialias:!mob});
+  r.setSize(innerWidth,innerHeight);r.setPixelRatio(pr);
+  r.toneMapping=THREE.ACESFilmicToneMapping;r.toneMappingExposure=1.2;
+  scene.add(new THREE.AmbientLight(0xffffff,.25));
+  var l1=new THREE.PointLight(0x2f6fff,4,25);l1.position.set(4,3,5);scene.add(l1);
+  var l2=new THREE.PointLight(0x7c3aed,3,25);l2.position.set(-4,-2,3);scene.add(l2);
+  var l3=new THREE.PointLight(0x06b6d4,2,20);l3.position.set(0,4,-3);scene.add(l3);
+  var mB=new THREE.MeshPhysicalMaterial({color:0x2f6fff,metalness:.7,roughness:.12,clearcoat:1,clearcoatRoughness:.08,transparent:true,opacity:.8});
+  var mP=new THREE.MeshPhysicalMaterial({color:0x7c3aed,metalness:.5,roughness:.2,transparent:true,opacity:.65});
+  var mC=new THREE.MeshPhysicalMaterial({color:0x06b6d4,metalness:.6,roughness:.15,transparent:true,opacity:.6});
+  var wf=function(c,o){return new THREE.MeshBasicMaterial({color:c,wireframe:true,transparent:true,opacity:o||.2})};
+  var tk=new THREE.Mesh(new THREE.TorusKnotGeometry(1.1,.32,mob?64:128,24),mB);tk.position.set(2.5,.2,-.5);scene.add(tk);
+  var ic=new THREE.Mesh(new THREE.IcosahedronGeometry(.85,0),mP);ic.position.set(-3,1.2,-1);scene.add(ic);
+  var iw=new THREE.Mesh(new THREE.IcosahedronGeometry(.92,0),wf(0x7c3aed,.15));iw.position.copy(ic.position);scene.add(iw);
+  var oc=new THREE.Mesh(new THREE.OctahedronGeometry(.5,0),mC);oc.position.set(1.2,2.5,-2);scene.add(oc);
+  var rn=new THREE.Mesh(new THREE.TorusGeometry(1.2,.015,16,80),wf(0x2f6fff,.3));rn.position.set(-1.5,-1.8,-1.5);rn.rotation.x=Math.PI/3.5;scene.add(rn);
+  var r2=new THREE.Mesh(new THREE.TorusGeometry(.8,.015,16,60),wf(0x7c3aed,.2));r2.position.set(3,-1,-2);r2.rotation.x=Math.PI/2.5;r2.rotation.z=.5;scene.add(r2);
+  var dd=new THREE.Mesh(new THREE.DodecahedronGeometry(.4,0),mB.clone());dd.material.opacity=.5;dd.position.set(-2,-1.5,-.5);scene.add(dd);
+  var pc=mob?40:80,pg=new THREE.BufferGeometry(),pp=new Float32Array(pc*3);
+  for(var i=0;i<pc*3;i+=3){pp[i]=(Math.random()-.5)*14;pp[i+1]=(Math.random()-.5)*10;pp[i+2]=(Math.random()-.5)*8-2;}
+  pg.setAttribute('position',new THREE.BufferAttribute(pp,3));
+  scene.add(new THREE.Points(pg,new THREE.PointsMaterial({color:0x5591ff,size:.04,transparent:true,opacity:.5,sizeAttenuation:true})));
+  var mx=0,my=0,tx=0,ty=0;
+  document.addEventListener('mousemove',function(e){tx=(e.clientX/innerWidth)*2-1;ty=-(e.clientY/innerHeight)*2+1},{passive:true});
+  var vis=true;
+  function anim(){if(!vis)return;requestAnimationFrame(anim);var t=performance.now()*.001;
+    mx+=(tx-mx)*.03;my+=(ty-my)*.03;
+    tk.rotation.x=t*.15;tk.rotation.y=t*.2;tk.position.y=.2+Math.sin(t*.4)*.3;
+    ic.rotation.x=t*.12;ic.rotation.z=t*.18;ic.position.y=1.2+Math.sin(t*.6)*.2;iw.rotation.copy(ic.rotation);iw.position.y=ic.position.y;
+    oc.rotation.y=t*.35;oc.rotation.x=t*.15;oc.position.y=2.5+Math.cos(t*.5)*.15;
+    rn.rotation.y=t*.08;r2.rotation.y=-t*.06;
+    dd.rotation.x=t*.2;dd.rotation.y=t*.3;dd.position.y=-1.5+Math.sin(t*.7+2)*.15;
+    var p=pg.attributes.position.array;for(var i=1;i<p.length;i+=3)p[i]+=Math.sin(t*.3+i)*.0008;pg.attributes.position.needsUpdate=true;
+    l1.position.x=4+Math.sin(t*.3);l1.position.y=3+Math.cos(t*.4)*.5;l2.position.x=-4+Math.cos(t*.25);
+    cam.position.x+=(mx*.4-cam.position.x)*.015;cam.position.y+=(my*.3-cam.position.y)*.015;cam.lookAt(0,0,0);
+    r.render(scene,cam);
+  }
+  anim();
+  window.addEventListener('resize',function(){cam.aspect=innerWidth/innerHeight;cam.updateProjectionMatrix();r.setSize(innerWidth,innerHeight)},{passive:true});
+  new IntersectionObserver(function(e){vis=e[0].isIntersecting;if(vis)anim()},{threshold:.05}).observe(document.getElementById('hero'));
+  }catch(e){console.warn('Three.js scene error:',e);}
+})();
+</script>
+
+
+<!-- ═══════════════════════════════════════════════════════════════════════
+     TRANSLATIONS (5 languages)
+     ═══════════════════════════════════════════════════════════════════ -->
+<script>
+var T={
+nl:{
+  'nav.how':'Zo Werkt Het','nav.features':'Features','nav.portfolio':'Voorbeelden','nav.pricing':'Prijzen','nav.contact':'Contact','nav.cta':'Bekijk Virelio.nl',
+  'hero.badge':'AI-powered webdesign voor ondernemers','hero.title1':'Professionele Websites,','hero.title2':'Automatisch Gegenereerd',
+  'hero.sub':'Wij vinden jouw bedrijf op Google Maps en genereren een op-maat gemaakte website — volledig automatisch. Bekijk jouw gratis preview binnen 24 uur.',
+  'hero.cta1':'Bekijk Pakketten','hero.cta2':'Neem Contact Op',
+  'hero.stat1':'Bedrijven gescand','hero.stat2':'Template stijlen','hero.stat3':'Uur levertijd','hero.stat4':'Automatisch','hero.scroll':'Scroll',
+  'hero.typing':['Automatisch gegenereerd met AI','Op maat gemaakt voor jouw merk','Live binnen 24 uur','Zonder technische kennis'],
+  'trust.label':'Vertrouwd door bedrijven in',
+  'steps.label':'Zo Werkt Het','steps.title1':'In drie stappen naar','steps.title2':'jouw professionele website',
+  'steps.s1.title':'Scannen','steps.s1.desc':'Wij doorzoeken Google Maps en vinden jouw bedrijf. Naam, adres, reviews, foto\'s — alles wordt automatisch verzameld.',
+  'steps.s2.title':'Ontwerpen','steps.s2.desc':'AI analyseert jouw merk, kiest het perfecte template en genereert een complete website met jouw kleuren, reviews en foto\'s.',
+  'steps.s3.title':'Lanceren','steps.s3.desc':'Je ontvangt een preview-link. Tevreden? Dan gaat jouw website direct live met een eigen domeinnaam.',
+  'feat.label':'Wat Maakt Ons Uniek','feat.title':'Alles wat jouw bedrijf online nodig heeft',
+  'feat.f1.t':'AI-Gegenereerde Content','feat.f1.d':'Professionele teksten specifiek geschreven voor jouw branche en diensten. Geen templates — echt maatwerk.',
+  'feat.f2.t':'Automatische Huisstijl','feat.f2.d':'Jouw logo-kleuren worden automatisch herkend en doorgevoerd in het hele ontwerp. Herkenbaar en consistent.',
+  'feat.f3.t':'Google Reviews Integratie','feat.f3.d':'Jouw beste Google-beoordelingen direct op de website. Laat nieuwe klanten zien wat anderen over je zeggen.',
+  'feat.f4.t':'Mobiel-Vriendelijk','feat.f4.d':'Elk design is responsive — perfect weergegeven op telefoon, tablet en desktop. Geen compromissen.',
+  'feat.f5.t':'7+ Template Stijlen','feat.f5.d':'Van trendy tot elegant, van klinisch tot stoer. AI kiest het ontwerp dat het beste past bij jouw branche.',
+  'feat.f6.t':'SEO Geoptimaliseerd','feat.f6.d':'Vindbaar in Google vanaf dag één. Meta-tags, snelle laadtijden en gestructureerde content voor betere rankings.',
+  'port.label':'Voorbeelden','port.title':'Bekijk wat wij voor jouw bedrijf kunnen maken',
+  'port.p1.badge':'Elegant Template','port.p1.title':'Kapperszaken & Schoonheidssalons','port.p1.desc':'Elegante, donkere designs met gouden accenten. Perfect voor kappers, barbershops en beauty-salons die een premium uitstraling willen.',
+  'port.p1.c1':'Automatisch herkende merkkleur (goud)','port.p1.c2':'156 Google Reviews geïntegreerd','port.p1.c3':'AI-geschreven diensten & beschrijvingen',
+  'port.p2.badge':'Modern Template','port.p2.title':'Tandartsen & Klinieken','port.p2.desc':'Schone, vertrouwenwekkende designs met een professionele uitstraling. Ideaal voor medische praktijken en fysiotherapeuten.',
+  'port.p2.c1':'Vertrouwenwekkende blauwe kleurpaletten','port.p2.c2':'Openingstijden & locatie prominent','port.p2.c3':'Behandelingen met duidelijke beschrijvingen',
+  'price.label':'Prijzen','price.title':'Eenvoudige, transparante prijzen','price.sub':'Start gratis. Upgrade wanneer je klaar bent om live te gaan.',
+  'price.monthly':'Maandelijks','price.yearly':'Jaarlijks','price.save':'-20%','price.popular':'Meest Gekozen','price.permonth':'/maand',
+  'price.t1.name':'Preview','price.t1.price':'Gratis','price.t1.desc':'Bekijk hoe jouw website eruitziet. Geen verplichtingen.',
+  'price.t1.f1':'AI-gegenereerde website preview','price.t1.f2':'Google Reviews integratie','price.t1.f3':'Mobiel-responsive design','price.t1.f4':'Eigen domein','price.t1.cta':'Vraag Preview Aan',
+  'price.t2.name':'Starter','price.t2.desc':'Jouw website live met hosting en ondersteuning.',
+  'price.t2.f1':'Alles uit Preview','price.t2.f2':'Website live & gehost','price.t2.f3':'Gratis subdomein','price.t2.f4':'SSL-certificaat','price.t2.f5':'E-mail support','price.t2.cta':'Start Nu',
+  'price.t3.name':'Professional','price.t3.desc':'Alles voor een volledige online aanwezigheid.',
+  'price.t3.f1':'Alles uit Starter','price.t3.f2':'Eigen domeinnaam (.nl)','price.t3.f3':'Professioneel e-mailadres','price.t3.f4':'Google Analytics','price.t3.f5':'Prioriteit support','price.t3.f6':'Maandelijkse content updates','price.t3.cta':'Neem Contact Op',
+  'testi.label':'Klanten Aan Het Woord','testi.title':'Wat ondernemers over ons zeggen',
+  'testi.t1.text':'"Ik kon niet geloven hoe snel mijn website er was. Binnen een dag had ik een professionele site die er beter uitziet dan wat ik zelf in weken had kunnen maken. Mijn klanten zijn onder de indruk!"',
+  'testi.t1.name':'Mariam El-Fassi','testi.t1.role':'Eigenaar, Salon Goud — Amsterdam',
+  'testi.t2.text':'"Onze trattoria had nog nooit een website gehad. VirelioCreator maakte een prachtig design met onze foto\'s en menu. We krijgen nu reserveringen via de website — ongelooflijk!"',
+  'testi.t2.name':'Luca Rossi','testi.t2.role':'Chef, Trattoria Bella — Rotterdam',
+  'testi.t3.text':'"Als tandarts heb ik geen tijd om een website te bouwen. VirelioCreator deed het automatisch — met mijn reviews, openingstijden en behandelingen. Mijn patiënten vinden het overzichtelijk en professioneel."',
+  'testi.t3.name':'Dr. David van der Berg','testi.t3.role':'Tandarts, Praktijk De Jordaan — Utrecht',
+  'faq.label':'Veelgestelde Vragen','faq.title':'Alles wat je wilt weten',
+  'faq.q1':'Hoe werkt het precies?','faq.a1':'Wij zoeken jouw bedrijf op Google Maps, verzamelen automatisch alle informatie (naam, adres, reviews, foto\'s, openingstijden) en gebruiken AI om een professionele website te genereren die perfect bij jouw merk past. Je ontvangt een preview-link per e-mail.',
+  'faq.q2':'Wat kost het?','faq.a2':'De preview is volledig gratis en vrijblijvend. Wil je de website live zetten? Dan begint het Starter-pakket bij €29 per maand inclusief hosting. Het Professional-pakket (€49/maand) bevat een eigen domeinnaam en e-mailadres.',
+  'faq.q3':'Hoe lang duurt het?','faq.a3':'Jouw website wordt binnen 24 uur gegenereerd. Het volledige proces — van scan tot preview — is automatisch. Zodra je tevreden bent, kan je website dezelfde dag nog live.',
+  'faq.q4':'Kan ik de website aanpassen?','faq.a4':'Ja! Na het genereren kun je wijzigingen doorgeven. Denk aan tekstaanpassingen, extra foto\'s of een ander kleurenschema. Bij het Professional-pakket krijg je maandelijkse content updates.',
+  'faq.q5':'Is er een contract of opzegtermijn?','faq.a5':'Nee, je zit nergens aan vast. Je kunt maandelijks opzeggen. Bij jaarlijkse betaling krijg je 20% korting, maar ook dan kun je na het jaar stoppen zonder extra kosten.',
+  'cta.title':'Klaar om jouw bedrijf online te brengen?','cta.desc':'Vraag nu een gratis preview aan en bekijk binnen 24 uur hoe jouw professionele website eruitziet. Geen verplichtingen.','cta.primary':'Bekijk Virelio.nl','cta.secondary':'Neem Contact Op',
+  'contact.label':'Neem Contact Op','contact.title':'Vragen? Wij helpen je graag.','contact.desc':'Benieuwd wat wij voor jouw bedrijf kunnen betekenen? Stuur ons een bericht of neem direct contact op. We reageren altijd binnen 24 uur.',
+  'contact.emailLabel':'E-mail','contact.phoneLabel':'Telefoon','contact.locLabel':'Locatie',
+  'form.name':'Naam *','form.namePh':'Jouw naam','form.biz':'Bedrijfsnaam','form.bizPh':'Jouw bedrijfsnaam','form.email':'E-mail *','form.emailPh':'jouw@email.nl','form.phone':'Telefoon','form.phonePh':'+31 6 ...','form.msg':'Bericht *','form.msgPh':'Vertel ons over jouw bedrijf...','form.submit':'Verstuur Bericht','form.note':'Wij reageren altijd binnen 24 uur. Geen spam, dat beloven we.',
+  'toast.ok':'Bedankt! We nemen zo snel mogelijk contact op.','toast.err':'Er ging iets mis. Probeer het opnieuw.','form.sending':'Verzenden...'
+},
+en:{
+  'nav.how':'How It Works','nav.features':'Features','nav.portfolio':'Examples','nav.pricing':'Pricing','nav.contact':'Contact','nav.cta':'Visit Virelio.nl',
+  'hero.badge':'AI-powered web design for entrepreneurs','hero.title1':'Professional Websites,','hero.title2':'Automatically Generated',
+  'hero.sub':'We find your business on Google Maps and generate a custom website — fully automatic. View your free preview within 24 hours.',
+  'hero.cta1':'View Plans','hero.cta2':'Get In Touch',
+  'hero.stat1':'Businesses scanned','hero.stat2':'Template styles','hero.stat3':'Hour delivery','hero.stat4':'Automatic','hero.scroll':'Scroll',
+  'hero.typing':['Automatically generated with AI','Custom-made for your brand','Live within 24 hours','No technical skills needed'],
+  'trust.label':'Trusted by businesses in',
+  'steps.label':'How It Works','steps.title1':'Three steps to','steps.title2':'your professional website',
+  'steps.s1.title':'Scan','steps.s1.desc':'We search Google Maps and find your business. Name, address, reviews, photos — everything is collected automatically.',
+  'steps.s2.title':'Design','steps.s2.desc':'AI analyzes your brand, picks the perfect template and generates a complete website with your colors, reviews and photos.',
+  'steps.s3.title':'Launch','steps.s3.desc':'You receive a preview link. Happy? Your website goes live immediately with your own domain name.',
+  'feat.label':'What Makes Us Unique','feat.title':'Everything your business needs online',
+  'feat.f1.t':'AI-Generated Content','feat.f1.d':'Professional copy specifically written for your industry and services. No templates — truly custom.',
+  'feat.f2.t':'Automatic Branding','feat.f2.d':'Your logo colors are automatically detected and applied throughout the entire design. Recognizable and consistent.',
+  'feat.f3.t':'Google Reviews Integration','feat.f3.d':'Your best Google reviews directly on the website. Show new customers what others say about you.',
+  'feat.f4.t':'Mobile-Friendly','feat.f4.d':'Every design is responsive — perfectly displayed on phone, tablet and desktop. No compromises.',
+  'feat.f5.t':'7+ Template Styles','feat.f5.d':'From trendy to elegant, clinical to bold. AI picks the design that best fits your industry.',
+  'feat.f6.t':'SEO Optimized','feat.f6.d':'Findable on Google from day one. Meta tags, fast load times and structured content for better rankings.',
+  'port.label':'Examples','port.title':'See what we can create for your business',
+  'port.p1.badge':'Elegant Template','port.p1.title':'Hair Salons & Beauty Studios','port.p1.desc':'Elegant, dark designs with golden accents. Perfect for hair salons, barbershops and beauty studios that want a premium look.',
+  'port.p1.c1':'Auto-detected brand color (gold)','port.p1.c2':'156 Google Reviews integrated','port.p1.c3':'AI-written services & descriptions',
+  'port.p2.badge':'Modern Template','port.p2.title':'Dentists & Clinics','port.p2.desc':'Clean, trust-building designs with a professional look. Ideal for medical practices and physiotherapists.',
+  'port.p2.c1':'Trustworthy blue color palettes','port.p2.c2':'Opening hours & location prominent','port.p2.c3':'Treatments with clear descriptions',
+  'price.label':'Pricing','price.title':'Simple, transparent pricing','price.sub':'Start free. Upgrade when you\'re ready to go live.',
+  'price.monthly':'Monthly','price.yearly':'Yearly','price.save':'-20%','price.popular':'Most Popular','price.permonth':'/month',
+  'price.t1.name':'Preview','price.t1.price':'Free','price.t1.desc':'See what your website looks like. No obligations.',
+  'price.t1.f1':'AI-generated website preview','price.t1.f2':'Google Reviews integration','price.t1.f3':'Mobile-responsive design','price.t1.f4':'Custom domain','price.t1.cta':'Request Preview',
+  'price.t2.name':'Starter','price.t2.desc':'Your website live with hosting and support.',
+  'price.t2.f1':'Everything in Preview','price.t2.f2':'Website live & hosted','price.t2.f3':'Free subdomain','price.t2.f4':'SSL certificate','price.t2.f5':'Email support','price.t2.cta':'Start Now',
+  'price.t3.name':'Professional','price.t3.desc':'Everything for a complete online presence.',
+  'price.t3.f1':'Everything in Starter','price.t3.f2':'Custom domain name (.nl)','price.t3.f3':'Professional email address','price.t3.f4':'Google Analytics','price.t3.f5':'Priority support','price.t3.f6':'Monthly content updates','price.t3.cta':'Get In Touch',
+  'testi.label':'Customer Stories','testi.title':'What entrepreneurs say about us',
+  'testi.t1.text':'"I couldn\'t believe how fast my website was ready. Within a day I had a professional site that looks better than what I could have built myself in weeks. My clients are impressed!"',
+  'testi.t1.name':'Mariam El-Fassi','testi.t1.role':'Owner, Salon Goud — Amsterdam',
+  'testi.t2.text':'"Our trattoria never had a website. VirelioCreator created a beautiful design with our photos and menu. We now get reservations through the website — incredible!"',
+  'testi.t2.name':'Luca Rossi','testi.t2.role':'Chef, Trattoria Bella — Rotterdam',
+  'testi.t3.text':'"As a dentist I don\'t have time to build a website. VirelioCreator did it automatically — with my reviews, opening hours and treatments. My patients find it clear and professional."',
+  'testi.t3.name':'Dr. David van der Berg','testi.t3.role':'Dentist, Praktijk De Jordaan — Utrecht',
+  'faq.label':'FAQ','faq.title':'Everything you want to know',
+  'faq.q1':'How does it work exactly?','faq.a1':'We find your business on Google Maps, automatically collect all information (name, address, reviews, photos, opening hours) and use AI to generate a professional website that perfectly matches your brand. You receive a preview link by email.',
+  'faq.q2':'What does it cost?','faq.a2':'The preview is completely free with no obligations. Want to go live? The Starter plan starts at €29/month including hosting. The Professional plan (€49/month) includes a custom domain and email address.',
+  'faq.q3':'How long does it take?','faq.a3':'Your website is generated within 24 hours. The entire process — from scan to preview — is automatic. Once you\'re happy, your website can go live the same day.',
+  'faq.q4':'Can I customize the website?','faq.a4':'Yes! After generation you can request changes. Think text adjustments, extra photos or a different color scheme. The Professional plan includes monthly content updates.',
+  'faq.q5':'Is there a contract?','faq.a5':'No, you\'re not locked in. You can cancel monthly. With annual payment you get 20% off, but even then you can stop after the year without extra costs.',
+  'cta.title':'Ready to bring your business online?','cta.desc':'Request a free preview now and see your professional website within 24 hours. No obligations.','cta.primary':'Visit Virelio.nl','cta.secondary':'Get In Touch',
+  'contact.label':'Get In Touch','contact.title':'Questions? We\'re happy to help.','contact.desc':'Curious what we can do for your business? Send us a message or contact us directly. We always respond within 24 hours.',
+  'contact.emailLabel':'Email','contact.phoneLabel':'Phone','contact.locLabel':'Location',
+  'form.name':'Name *','form.namePh':'Your name','form.biz':'Business name','form.bizPh':'Your business name','form.email':'Email *','form.emailPh':'your@email.com','form.phone':'Phone','form.phonePh':'+31 6 ...','form.msg':'Message *','form.msgPh':'Tell us about your business...','form.submit':'Send Message','form.note':'We always respond within 24 hours. No spam, we promise.',
+  'toast.ok':'Thank you! We\'ll get back to you as soon as possible.','toast.err':'Something went wrong. Please try again.','form.sending':'Sending...'
+},
+es:{
+  'nav.how':'Cómo Funciona','nav.features':'Características','nav.portfolio':'Ejemplos','nav.pricing':'Precios','nav.contact':'Contacto','nav.cta':'Visitar Virelio.nl',
+  'hero.badge':'Diseño web con IA para emprendedores','hero.title1':'Sitios Web Profesionales,','hero.title2':'Generados Automáticamente',
+  'hero.sub':'Encontramos tu negocio en Google Maps y generamos un sitio web personalizado — completamente automático. Vista previa gratuita en 24 horas.',
+  'hero.cta1':'Ver Planes','hero.cta2':'Contáctanos',
+  'hero.stat1':'Negocios escaneados','hero.stat2':'Estilos de plantilla','hero.stat3':'Horas de entrega','hero.stat4':'Automático','hero.scroll':'Desplázate',
+  'hero.typing':['Generado automáticamente con IA','Personalizado para tu marca','En línea en 24 horas','Sin conocimientos técnicos'],
+  'trust.label':'Confianza de empresas en',
+  'steps.label':'Cómo Funciona','steps.title1':'En tres pasos hacia','steps.title2':'tu sitio web profesional',
+  'steps.s1.title':'Escanear','steps.s1.desc':'Buscamos en Google Maps y encontramos tu negocio. Nombre, dirección, reseñas, fotos — todo se recopila automáticamente.',
+  'steps.s2.title':'Diseñar','steps.s2.desc':'La IA analiza tu marca, elige la plantilla perfecta y genera un sitio web completo con tus colores, reseñas y fotos.',
+  'steps.s3.title':'Lanzar','steps.s3.desc':'Recibes un enlace de vista previa. ¿Satisfecho? Tu sitio web se publica inmediatamente con tu propio dominio.',
+  'feat.label':'Qué Nos Hace Únicos','feat.title':'Todo lo que tu negocio necesita en línea',
+  'feat.f1.t':'Contenido Generado por IA','feat.f1.d':'Textos profesionales escritos específicamente para tu industria y servicios. Sin plantillas — verdaderamente personalizado.',
+  'feat.f2.t':'Marca Automática','feat.f2.d':'Los colores de tu logo se detectan automáticamente y se aplican en todo el diseño. Reconocible y consistente.',
+  'feat.f3.t':'Integración Google Reviews','feat.f3.d':'Tus mejores reseñas de Google directamente en el sitio web. Muestra a nuevos clientes lo que otros dicen de ti.',
+  'feat.f4.t':'Adaptado a Móviles','feat.f4.d':'Cada diseño es responsive — perfecto en teléfono, tablet y escritorio. Sin compromisos.',
+  'feat.f5.t':'7+ Estilos de Plantilla','feat.f5.d':'De moderno a elegante, clínico a audaz. La IA elige el diseño que mejor se adapta a tu industria.',
+  'feat.f6.t':'Optimizado para SEO','feat.f6.d':'Encontrable en Google desde el primer día. Meta-tags, tiempos de carga rápidos y contenido estructurado.',
+  'port.label':'Ejemplos','port.title':'Mira lo que podemos crear para tu negocio',
+  'port.p1.badge':'Plantilla Elegante','port.p1.title':'Peluquerías y Salones de Belleza','port.p1.desc':'Diseños elegantes y oscuros con acentos dorados. Perfecto para peluquerías y salones que quieren una imagen premium.',
+  'port.p1.c1':'Color de marca detectado (dorado)','port.p1.c2':'156 Google Reviews integradas','port.p1.c3':'Servicios y descripciones escritos por IA',
+  'port.p2.badge':'Plantilla Moderna','port.p2.title':'Dentistas y Clínicas','port.p2.desc':'Diseños limpios y profesionales que generan confianza. Ideal para consultas médicas y fisioterapeutas.',
+  'port.p2.c1':'Paletas de colores azules confiables','port.p2.c2':'Horarios y ubicación destacados','port.p2.c3':'Tratamientos con descripciones claras',
+  'price.label':'Precios','price.title':'Precios simples y transparentes','price.sub':'Empieza gratis. Actualiza cuando estés listo.',
+  'price.monthly':'Mensual','price.yearly':'Anual','price.save':'-20%','price.popular':'Más Popular','price.permonth':'/mes',
+  'price.t1.name':'Vista Previa','price.t1.price':'Gratis','price.t1.desc':'Mira cómo se ve tu sitio web. Sin obligaciones.',
+  'price.t1.f1':'Vista previa del sitio web con IA','price.t1.f2':'Integración Google Reviews','price.t1.f3':'Diseño responsive','price.t1.f4':'Dominio propio','price.t1.cta':'Solicitar Vista Previa',
+  'price.t2.name':'Starter','price.t2.desc':'Tu sitio web en línea con hosting y soporte.',
+  'price.t2.f1':'Todo de Vista Previa','price.t2.f2':'Sitio web en línea y alojado','price.t2.f3':'Subdominio gratuito','price.t2.f4':'Certificado SSL','price.t2.f5':'Soporte por email','price.t2.cta':'Empezar Ahora',
+  'price.t3.name':'Professional','price.t3.desc':'Todo para una presencia en línea completa.',
+  'price.t3.f1':'Todo de Starter','price.t3.f2':'Dominio propio (.nl)','price.t3.f3':'Email profesional','price.t3.f4':'Google Analytics','price.t3.f5':'Soporte prioritario','price.t3.f6':'Actualizaciones mensuales','price.t3.cta':'Contáctanos',
+  'testi.label':'Testimonios','testi.title':'Lo que dicen los emprendedores',
+  'testi.t1.text':'"No podía creer lo rápido que mi sitio web estuvo listo. En un día tenía un sitio profesional que se ve mejor de lo que yo podría haber hecho en semanas. ¡Mis clientes están impresionados!"',
+  'testi.t1.name':'Mariam El-Fassi','testi.t1.role':'Propietaria, Salon Goud — Ámsterdam',
+  'testi.t2.text':'"Nuestra trattoria nunca tuvo un sitio web. VirelioCreator creó un diseño hermoso con nuestras fotos y menú. ¡Ahora recibimos reservas a través del sitio — increíble!"',
+  'testi.t2.name':'Luca Rossi','testi.t2.role':'Chef, Trattoria Bella — Róterdam',
+  'testi.t3.text':'"Como dentista no tengo tiempo para construir un sitio web. VirelioCreator lo hizo automáticamente — con mis reseñas, horarios y tratamientos. Mis pacientes lo encuentran claro y profesional."',
+  'testi.t3.name':'Dr. David van der Berg','testi.t3.role':'Dentista, Praktijk De Jordaan — Utrecht',
+  'faq.label':'Preguntas Frecuentes','faq.title':'Todo lo que quieres saber',
+  'faq.q1':'¿Cómo funciona exactamente?','faq.a1':'Buscamos tu negocio en Google Maps, recopilamos automáticamente toda la información y usamos IA para generar un sitio web profesional que coincida con tu marca. Recibes un enlace de vista previa por email.',
+  'faq.q2':'¿Cuánto cuesta?','faq.a2':'La vista previa es completamente gratuita. ¿Quieres publicar? El plan Starter comienza en €29/mes con hosting incluido. El plan Professional (€49/mes) incluye dominio propio y email.',
+  'faq.q3':'¿Cuánto tiempo tarda?','faq.a3':'Tu sitio web se genera en 24 horas. Todo el proceso es automático. Una vez satisfecho, tu sitio puede publicarse el mismo día.',
+  'faq.q4':'¿Puedo personalizar el sitio?','faq.a4':'¡Sí! Después de la generación puedes solicitar cambios. El plan Professional incluye actualizaciones mensuales de contenido.',
+  'faq.q5':'¿Hay contrato?','faq.a5':'No, no hay compromiso. Puedes cancelar mensualmente. Con pago anual obtienes 20% de descuento.',
+  'cta.title':'¿Listo para llevar tu negocio en línea?','cta.desc':'Solicita una vista previa gratuita y mira tu sitio web profesional en 24 horas. Sin obligaciones.','cta.primary':'Visitar Virelio.nl','cta.secondary':'Contáctanos',
+  'contact.label':'Contáctanos','contact.title':'¿Preguntas? Estamos para ayudarte.','contact.desc':'¿Curioso sobre lo que podemos hacer por tu negocio? Envíanos un mensaje. Respondemos siempre en 24 horas.',
+  'contact.emailLabel':'Email','contact.phoneLabel':'Teléfono','contact.locLabel':'Ubicación',
+  'form.name':'Nombre *','form.namePh':'Tu nombre','form.biz':'Nombre del negocio','form.bizPh':'Tu negocio','form.email':'Email *','form.emailPh':'tu@email.com','form.phone':'Teléfono','form.phonePh':'+31 6 ...','form.msg':'Mensaje *','form.msgPh':'Cuéntanos sobre tu negocio...','form.submit':'Enviar Mensaje','form.note':'Respondemos siempre en 24 horas. Sin spam, lo prometemos.',
+  'toast.ok':'¡Gracias! Nos pondremos en contacto lo antes posible.','toast.err':'Algo salió mal. Inténtalo de nuevo.','form.sending':'Enviando...'
+},
+de:{
+  'nav.how':'So Funktioniert\'s','nav.features':'Features','nav.portfolio':'Beispiele','nav.pricing':'Preise','nav.contact':'Kontakt','nav.cta':'Virelio.nl Besuchen',
+  'hero.badge':'KI-gestütztes Webdesign für Unternehmer','hero.title1':'Professionelle Websites,','hero.title2':'Automatisch Generiert',
+  'hero.sub':'Wir finden Ihr Unternehmen auf Google Maps und erstellen eine maßgeschneiderte Website — vollautomatisch. Kostenlose Vorschau in 24 Stunden.',
+  'hero.cta1':'Pakete Ansehen','hero.cta2':'Kontakt Aufnehmen',
+  'hero.stat1':'Unternehmen gescannt','hero.stat2':'Template-Stile','hero.stat3':'Stunden Lieferzeit','hero.stat4':'Automatisch','hero.scroll':'Scrollen',
+  'hero.typing':['Automatisch mit KI generiert','Maßgeschneidert für Ihre Marke','In 24 Stunden online','Keine technischen Kenntnisse nötig'],
+  'trust.label':'Vertraut von Unternehmen in',
+  'steps.label':'So Funktioniert\'s','steps.title1':'In drei Schritten zu','steps.title2':'Ihrer professionellen Website',
+  'steps.s1.title':'Scannen','steps.s1.desc':'Wir durchsuchen Google Maps und finden Ihr Unternehmen. Name, Adresse, Bewertungen, Fotos — alles wird automatisch erfasst.',
+  'steps.s2.title':'Gestalten','steps.s2.desc':'KI analysiert Ihre Marke, wählt das perfekte Template und erstellt eine komplette Website mit Ihren Farben, Bewertungen und Fotos.',
+  'steps.s3.title':'Starten','steps.s3.desc':'Sie erhalten einen Vorschau-Link. Zufrieden? Ihre Website geht sofort mit eigenem Domainnamen live.',
+  'feat.label':'Was Uns Einzigartig Macht','feat.title':'Alles was Ihr Unternehmen online braucht',
+  'feat.f1.t':'KI-Generierte Inhalte','feat.f1.d':'Professionelle Texte speziell für Ihre Branche und Dienstleistungen. Keine Vorlagen — echte Maßarbeit.',
+  'feat.f2.t':'Automatisches Branding','feat.f2.d':'Ihre Logo-Farben werden automatisch erkannt und im gesamten Design umgesetzt. Wiedererkennbar und konsistent.',
+  'feat.f3.t':'Google Reviews Integration','feat.f3.d':'Ihre besten Google-Bewertungen direkt auf der Website. Zeigen Sie neuen Kunden, was andere über Sie sagen.',
+  'feat.f4.t':'Mobilfreundlich','feat.f4.d':'Jedes Design ist responsive — perfekt auf Handy, Tablet und Desktop. Keine Kompromisse.',
+  'feat.f5.t':'7+ Template-Stile','feat.f5.d':'Von trendy bis elegant, klinisch bis markant. KI wählt das Design, das am besten zu Ihrer Branche passt.',
+  'feat.f6.t':'SEO-Optimiert','feat.f6.d':'Ab dem ersten Tag bei Google auffindbar. Meta-Tags, schnelle Ladezeiten und strukturierte Inhalte.',
+  'port.label':'Beispiele','port.title':'Sehen Sie, was wir für Ihr Unternehmen erstellen können',
+  'port.p1.badge':'Elegantes Template','port.p1.title':'Friseursalons & Beauty-Studios','port.p1.desc':'Elegante, dunkle Designs mit goldenen Akzenten. Perfekt für Friseure und Beauty-Salons mit Premium-Anspruch.',
+  'port.p1.c1':'Automatisch erkannte Markenfarbe (Gold)','port.p1.c2':'156 Google Reviews integriert','port.p1.c3':'KI-geschriebene Dienstleistungen',
+  'port.p2.badge':'Modernes Template','port.p2.title':'Zahnärzte & Kliniken','port.p2.desc':'Saubere, vertrauensbildende Designs mit professioneller Ausstrahlung. Ideal für Arztpraxen und Physiotherapeuten.',
+  'port.p2.c1':'Vertrauenswürdige blaue Farbpaletten','port.p2.c2':'Öffnungszeiten & Standort prominent','port.p2.c3':'Behandlungen mit klaren Beschreibungen',
+  'price.label':'Preise','price.title':'Einfache, transparente Preise','price.sub':'Starten Sie kostenlos. Upgraden Sie, wenn Sie bereit sind.',
+  'price.monthly':'Monatlich','price.yearly':'Jährlich','price.save':'-20%','price.popular':'Am Beliebtesten','price.permonth':'/Monat',
+  'price.t1.name':'Vorschau','price.t1.price':'Kostenlos','price.t1.desc':'Sehen Sie, wie Ihre Website aussieht. Keine Verpflichtungen.',
+  'price.t1.f1':'KI-generierte Website-Vorschau','price.t1.f2':'Google Reviews Integration','price.t1.f3':'Mobil-responsives Design','price.t1.f4':'Eigene Domain','price.t1.cta':'Vorschau Anfordern',
+  'price.t2.name':'Starter','price.t2.desc':'Ihre Website live mit Hosting und Support.',
+  'price.t2.f1':'Alles aus Vorschau','price.t2.f2':'Website live & gehostet','price.t2.f3':'Kostenlose Subdomain','price.t2.f4':'SSL-Zertifikat','price.t2.f5':'E-Mail Support','price.t2.cta':'Jetzt Starten',
+  'price.t3.name':'Professional','price.t3.desc':'Alles für eine vollständige Online-Präsenz.',
+  'price.t3.f1':'Alles aus Starter','price.t3.f2':'Eigener Domainname (.nl)','price.t3.f3':'Professionelle E-Mail-Adresse','price.t3.f4':'Google Analytics','price.t3.f5':'Prioritäts-Support','price.t3.f6':'Monatliche Content-Updates','price.t3.cta':'Kontakt Aufnehmen',
+  'testi.label':'Kundenstimmen','testi.title':'Was Unternehmer über uns sagen',
+  'testi.t1.text':'"Ich konnte nicht glauben, wie schnell meine Website fertig war. Innerhalb eines Tages hatte ich eine professionelle Seite, die besser aussieht als alles, was ich selbst in Wochen hätte bauen können!"',
+  'testi.t1.name':'Mariam El-Fassi','testi.t1.role':'Inhaberin, Salon Goud — Amsterdam',
+  'testi.t2.text':'"Unsere Trattoria hatte noch nie eine Website. VirelioCreator hat ein wunderschönes Design mit unseren Fotos und Menü erstellt. Wir bekommen jetzt Reservierungen über die Website!"',
+  'testi.t2.name':'Luca Rossi','testi.t2.role':'Koch, Trattoria Bella — Rotterdam',
+  'testi.t3.text':'"Als Zahnarzt habe ich keine Zeit, eine Website zu bauen. VirelioCreator hat es automatisch gemacht — mit meinen Bewertungen, Öffnungszeiten und Behandlungen. Professionell und übersichtlich."',
+  'testi.t3.name':'Dr. David van der Berg','testi.t3.role':'Zahnarzt, Praktijk De Jordaan — Utrecht',
+  'faq.label':'Häufige Fragen','faq.title':'Alles was Sie wissen möchten',
+  'faq.q1':'Wie funktioniert es genau?','faq.a1':'Wir finden Ihr Unternehmen auf Google Maps, sammeln automatisch alle Informationen und nutzen KI, um eine professionelle Website zu generieren. Sie erhalten einen Vorschau-Link per E-Mail.',
+  'faq.q2':'Was kostet es?','faq.a2':'Die Vorschau ist völlig kostenlos. Möchten Sie live gehen? Das Starter-Paket beginnt bei €29/Monat inkl. Hosting. Das Professional-Paket (€49/Monat) enthält eine eigene Domain und E-Mail.',
+  'faq.q3':'Wie lange dauert es?','faq.a3':'Ihre Website wird innerhalb von 24 Stunden generiert. Der gesamte Prozess ist automatisch. Sobald Sie zufrieden sind, kann Ihre Website am selben Tag live gehen.',
+  'faq.q4':'Kann ich die Website anpassen?','faq.a4':'Ja! Nach der Generierung können Sie Änderungen anfordern. Das Professional-Paket beinhaltet monatliche Content-Updates.',
+  'faq.q5':'Gibt es einen Vertrag?','faq.a5':'Nein, Sie sind nicht gebunden. Monatlich kündbar. Bei jährlicher Zahlung erhalten Sie 20% Rabatt.',
+  'cta.title':'Bereit, Ihr Unternehmen online zu bringen?','cta.desc':'Fordern Sie jetzt eine kostenlose Vorschau an und sehen Sie Ihre professionelle Website in 24 Stunden.','cta.primary':'Virelio.nl Besuchen','cta.secondary':'Kontakt Aufnehmen',
+  'contact.label':'Kontakt','contact.title':'Fragen? Wir helfen gerne.','contact.desc':'Neugierig, was wir für Ihr Unternehmen tun können? Senden Sie uns eine Nachricht. Wir antworten immer innerhalb von 24 Stunden.',
+  'contact.emailLabel':'E-Mail','contact.phoneLabel':'Telefon','contact.locLabel':'Standort',
+  'form.name':'Name *','form.namePh':'Ihr Name','form.biz':'Firmenname','form.bizPh':'Ihr Unternehmen','form.email':'E-Mail *','form.emailPh':'ihre@email.de','form.phone':'Telefon','form.phonePh':'+31 6 ...','form.msg':'Nachricht *','form.msgPh':'Erzählen Sie uns von Ihrem Unternehmen...','form.submit':'Nachricht Senden','form.note':'Wir antworten immer innerhalb von 24 Stunden. Kein Spam, versprochen.',
+  'toast.ok':'Danke! Wir melden uns so schnell wie möglich.','toast.err':'Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut.','form.sending':'Senden...'
+},
+fr:{
+  'nav.how':'Comment Ça Marche','nav.features':'Fonctionnalités','nav.portfolio':'Exemples','nav.pricing':'Tarifs','nav.contact':'Contact','nav.cta':'Visiter Virelio.nl',
+  'hero.badge':'Web design IA pour entrepreneurs','hero.title1':'Sites Web Professionnels,','hero.title2':'Générés Automatiquement',
+  'hero.sub':'Nous trouvons votre entreprise sur Google Maps et générons un site web sur mesure — entièrement automatique. Aperçu gratuit sous 24 heures.',
+  'hero.cta1':'Voir les Forfaits','hero.cta2':'Nous Contacter',
+  'hero.stat1':'Entreprises scannées','hero.stat2':'Styles de template','hero.stat3':'Heures de livraison','hero.stat4':'Automatique','hero.scroll':'Défiler',
+  'hero.typing':['Généré automatiquement par IA','Sur mesure pour votre marque','En ligne en 24 heures','Aucune compétence technique requise'],
+  'trust.label':'Fait confiance par des entreprises à',
+  'steps.label':'Comment Ça Marche','steps.title1':'En trois étapes vers','steps.title2':'votre site web professionnel',
+  'steps.s1.title':'Scanner','steps.s1.desc':'Nous recherchons sur Google Maps et trouvons votre entreprise. Nom, adresse, avis, photos — tout est collecté automatiquement.',
+  'steps.s2.title':'Concevoir','steps.s2.desc':'L\'IA analyse votre marque, choisit le template parfait et génère un site complet avec vos couleurs, avis et photos.',
+  'steps.s3.title':'Lancer','steps.s3.desc':'Vous recevez un lien d\'aperçu. Satisfait? Votre site web est mis en ligne immédiatement avec votre propre nom de domaine.',
+  'feat.label':'Ce Qui Nous Rend Uniques','feat.title':'Tout ce dont votre entreprise a besoin en ligne',
+  'feat.f1.t':'Contenu Généré par IA','feat.f1.d':'Textes professionnels spécifiquement écrits pour votre secteur et services. Pas de modèles — du vrai sur mesure.',
+  'feat.f2.t':'Branding Automatique','feat.f2.d':'Les couleurs de votre logo sont détectées et appliquées dans tout le design. Reconnaissable et cohérent.',
+  'feat.f3.t':'Intégration Google Reviews','feat.f3.d':'Vos meilleurs avis Google directement sur le site. Montrez aux nouveaux clients ce que les autres disent de vous.',
+  'feat.f4.t':'Adapté au Mobile','feat.f4.d':'Chaque design est responsive — parfait sur téléphone, tablette et ordinateur. Sans compromis.',
+  'feat.f5.t':'7+ Styles de Templates','feat.f5.d':'De tendance à élégant, clinique à audacieux. L\'IA choisit le design le mieux adapté à votre secteur.',
+  'feat.f6.t':'Optimisé SEO','feat.f6.d':'Trouvable sur Google dès le premier jour. Balises meta, temps de chargement rapides et contenu structuré.',
+  'port.label':'Exemples','port.title':'Découvrez ce que nous pouvons créer pour vous',
+  'port.p1.badge':'Template Élégant','port.p1.title':'Salons de Coiffure & Beauté','port.p1.desc':'Designs élégants et sombres avec des accents dorés. Parfait pour les coiffeurs et salons de beauté qui veulent un look premium.',
+  'port.p1.c1':'Couleur de marque détectée (or)','port.p1.c2':'156 Google Reviews intégrés','port.p1.c3':'Services et descriptions écrits par IA',
+  'port.p2.badge':'Template Moderne','port.p2.title':'Dentistes & Cliniques','port.p2.desc':'Designs propres et professionnels qui inspirent confiance. Idéal pour les cabinets médicaux et kinésithérapeutes.',
+  'port.p2.c1':'Palettes de couleurs bleues de confiance','port.p2.c2':'Horaires et localisation mis en avant','port.p2.c3':'Traitements avec descriptions claires',
+  'price.label':'Tarifs','price.title':'Des prix simples et transparents','price.sub':'Commencez gratuitement. Passez au supérieur quand vous êtes prêt.',
+  'price.monthly':'Mensuel','price.yearly':'Annuel','price.save':'-20%','price.popular':'Le Plus Populaire','price.permonth':'/mois',
+  'price.t1.name':'Aperçu','price.t1.price':'Gratuit','price.t1.desc':'Voyez à quoi ressemble votre site. Sans engagement.',
+  'price.t1.f1':'Aperçu du site web par IA','price.t1.f2':'Intégration Google Reviews','price.t1.f3':'Design responsive','price.t1.f4':'Domaine personnalisé','price.t1.cta':'Demander un Aperçu',
+  'price.t2.name':'Starter','price.t2.desc':'Votre site web en ligne avec hébergement et support.',
+  'price.t2.f1':'Tout d\'Aperçu','price.t2.f2':'Site web en ligne et hébergé','price.t2.f3':'Sous-domaine gratuit','price.t2.f4':'Certificat SSL','price.t2.f5':'Support email','price.t2.cta':'Commencer',
+  'price.t3.name':'Professional','price.t3.desc':'Tout pour une présence en ligne complète.',
+  'price.t3.f1':'Tout de Starter','price.t3.f2':'Nom de domaine (.nl)','price.t3.f3':'Adresse email professionnelle','price.t3.f4':'Google Analytics','price.t3.f5':'Support prioritaire','price.t3.f6':'Mises à jour mensuelles','price.t3.cta':'Nous Contacter',
+  'testi.label':'Témoignages','testi.title':'Ce que disent les entrepreneurs',
+  'testi.t1.text':'"Je n\'en croyais pas mes yeux. En un jour, j\'avais un site professionnel qui est meilleur que tout ce que j\'aurais pu faire moi-même en des semaines. Mes clients sont impressionnés!"',
+  'testi.t1.name':'Mariam El-Fassi','testi.t1.role':'Propriétaire, Salon Goud — Amsterdam',
+  'testi.t2.text':'"Notre trattoria n\'avait jamais eu de site web. VirelioCreator a créé un magnifique design avec nos photos et menu. Nous recevons maintenant des réservations via le site — incroyable!"',
+  'testi.t2.name':'Luca Rossi','testi.t2.role':'Chef, Trattoria Bella — Rotterdam',
+  'testi.t3.text':'"En tant que dentiste, je n\'ai pas le temps de construire un site web. VirelioCreator l\'a fait automatiquement — avec mes avis, horaires et traitements. Professionnel et clair."',
+  'testi.t3.name':'Dr. David van der Berg','testi.t3.role':'Dentiste, Praktijk De Jordaan — Utrecht',
+  'faq.label':'Questions Fréquentes','faq.title':'Tout ce que vous voulez savoir',
+  'faq.q1':'Comment ça marche exactement?','faq.a1':'Nous trouvons votre entreprise sur Google Maps, collectons automatiquement toutes les informations et utilisons l\'IA pour générer un site professionnel qui correspond à votre marque.',
+  'faq.q2':'Combien ça coûte?','faq.a2':'L\'aperçu est totalement gratuit. Le forfait Starter commence à 29€/mois avec hébergement inclus. Le forfait Professional (49€/mois) inclut un domaine et email personnalisés.',
+  'faq.q3':'Combien de temps ça prend?','faq.a3':'Votre site est généré en 24 heures. Le processus entier est automatique. Une fois satisfait, votre site peut être en ligne le jour même.',
+  'faq.q4':'Puis-je personnaliser le site?','faq.a4':'Oui! Après la génération, vous pouvez demander des modifications. Le forfait Professional inclut des mises à jour mensuelles.',
+  'faq.q5':'Y a-t-il un contrat?','faq.a5':'Non, sans engagement. Résiliation mensuelle possible. Avec le paiement annuel, vous obtenez 20% de réduction.',
+  'cta.title':'Prêt à mettre votre entreprise en ligne?','cta.desc':'Demandez un aperçu gratuit et découvrez votre site web professionnel en 24 heures. Sans engagement.','cta.primary':'Visiter Virelio.nl','cta.secondary':'Nous Contacter',
+  'contact.label':'Contact','contact.title':'Des questions? Nous sommes là pour vous.','contact.desc':'Curieux de savoir ce que nous pouvons faire pour votre entreprise? Envoyez-nous un message. Nous répondons toujours sous 24 heures.',
+  'contact.emailLabel':'Email','contact.phoneLabel':'Téléphone','contact.locLabel':'Localisation',
+  'form.name':'Nom *','form.namePh':'Votre nom','form.biz':'Nom de l\'entreprise','form.bizPh':'Votre entreprise','form.email':'Email *','form.emailPh':'votre@email.fr','form.phone':'Téléphone','form.phonePh':'+31 6 ...','form.msg':'Message *','form.msgPh':'Parlez-nous de votre entreprise...','form.submit':'Envoyer','form.note':'Nous répondons toujours sous 24 heures. Pas de spam, c\'est promis.',
+  'toast.ok':'Merci! Nous vous recontacterons dès que possible.','toast.err':'Une erreur s\'est produite. Veuillez réessayer.','form.sending':'Envoi...'
+}
+};
+var FLAGS={nl:'https://flagcdn.com/w40/nl.png',en:'https://flagcdn.com/w40/gb.png',es:'https://flagcdn.com/w40/es.png',de:'https://flagcdn.com/w40/de.png',fr:'https://flagcdn.com/w40/fr.png'};
+</script>
+
+
+<!-- ═══════════════════════════════════════════════════════════════════════
+     APP JS — theme, language, interactions, form
+     ═══════════════════════════════════════════════════════════════════ -->
+<script>
+(function(){
+  'use strict';
+
+  /* ─────────────────────────────────────────────────────────────────────
+     Each feature is in its own try/catch so one failure doesn't kill all.
+     ───────────────────────────────────────────────────────────────────── */
+
+  var html=document.documentElement;
+  var currentLang='nl';
+  var currentTheme='dark';
+
+  // ── THEME ──
+  try{
+    var storedTheme=localStorage.getItem('vl-theme');
+    var prefersDark=window.matchMedia('(prefers-color-scheme:dark)').matches;
+    currentTheme=storedTheme||(prefersDark?'dark':'light');
+    html.setAttribute('data-theme',currentTheme);
+    updateThemeIcons();
+    document.getElementById('theme-toggle').addEventListener('click',function(){
+      currentTheme=currentTheme==='dark'?'light':'dark';
+      html.setAttribute('data-theme',currentTheme);
+      localStorage.setItem('vl-theme',currentTheme);
+      updateThemeIcons();
+    });
+  }catch(e){console.warn('Theme init error:',e);}
+  function updateThemeIcons(){
+    try{
+      document.getElementById('icon-sun').classList.toggle('hidden',currentTheme==='light');
+      document.getElementById('icon-moon').classList.toggle('hidden',currentTheme==='dark');
+    }catch(e){}
+  }
+
+  // ── LANGUAGE ──
+  try{
+    var browserLang=(navigator.language||'nl').slice(0,2);
+    var supported=['nl','en','es','de','fr'];
+    var storedLang=localStorage.getItem('vl-lang');
+    currentLang=storedLang||(supported.indexOf(browserLang)>=0?browserLang:'nl');
+    var langDD=document.getElementById('lang-dropdown');
+    var langBtn=document.getElementById('lang-btn');
+    if(langBtn)langBtn.addEventListener('click',function(e){e.stopPropagation();langDD.classList.toggle('open');});
+    document.addEventListener('click',function(){if(langDD)langDD.classList.remove('open');});
+    document.querySelectorAll('.lang-option').forEach(function(el){
+      el.addEventListener('click',function(){
+        currentLang=this.dataset.lang;
+        localStorage.setItem('vl-lang',currentLang);
+        applyLang();
+        langDD.classList.remove('open');
+      });
+    });
+    applyLang();
+  }catch(e){console.warn('Language init error:',e);}
+
+  function applyLang(){
+    try{
+      if(typeof T==='undefined')return;
+      var t=T[currentLang]||T.nl;
+      if(!t)return;
+      html.setAttribute('lang',currentLang);
+      var flagEl=document.getElementById('lang-flag');
+      if(flagEl&&FLAGS)flagEl.src=FLAGS[currentLang]||FLAGS.nl;
+      var codeEl=document.getElementById('lang-code');
+      if(codeEl)codeEl.textContent=currentLang.toUpperCase();
+      document.querySelectorAll('.lang-option').forEach(function(o){o.classList.toggle('active',o.dataset.lang===currentLang);});
+      document.querySelectorAll('[data-i18n]').forEach(function(el){
+        var key=el.getAttribute('data-i18n');
+        if(t[key]&&typeof t[key]==='string')el.textContent=t[key];
+      });
+      document.querySelectorAll('[data-i18n-ph]').forEach(function(el){
+        var key=el.getAttribute('data-i18n-ph');
+        if(t[key])el.placeholder=t[key];
+      });
+      if(t['hero.typing'])startTyping(t['hero.typing']);
+    }catch(e){console.warn('applyLang error:',e);}
+  }
+
+  // ── TYPING EFFECT ──
+  var typingEl=document.getElementById('typing-text');
+  var typingTimeout=null;
+  function startTyping(phrases){
+    try{
+      if(!typingEl||!phrases||!phrases.length)return;
+      if(typingTimeout)clearTimeout(typingTimeout);
+      typingEl.textContent='';
+      var pi=0,ci=0,deleting=false;
+      function tick(){
+        var phrase=phrases[pi];
+        if(!deleting){
+          typingEl.textContent=phrase.slice(0,ci+1);ci++;
+          if(ci>=phrase.length){deleting=true;typingTimeout=setTimeout(tick,2000);return;}
+          typingTimeout=setTimeout(tick,50+Math.random()*30);
+        }else{
+          typingEl.textContent=phrase.slice(0,ci-1);ci--;
+          if(ci<=0){deleting=false;pi=(pi+1)%phrases.length;typingTimeout=setTimeout(tick,400);return;}
+          typingTimeout=setTimeout(tick,25);
+        }
+      }
+      tick();
+    }catch(e){console.warn('Typing error:',e);}
+  }
+
+  // ── SCROLL REVEAL (activates animations only after this succeeds) ──
+  try{
+    document.body.classList.add('reveal-ready');
+    var rObs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('revealed');rObs.unobserve(e.target);}});},{threshold:.1,rootMargin:'0px 0px -40px 0px'});
+    document.querySelectorAll('[data-reveal]').forEach(function(el){rObs.observe(el);});
+  }catch(e){console.warn('Reveal error:',e);document.body.classList.remove('reveal-ready');}
+
+  // ── COUNTER ANIMATION ──
+  try{
+    var cObs=new IntersectionObserver(function(entries){entries.forEach(function(e){
+      if(!e.isIntersecting)return;
+      var el=e.target,end=parseInt(el.dataset.count);
+      if(!end||el.dataset.counted)return;
+      el.dataset.counted='1';
+      var t0=null;
+      function step(ts){if(!t0)t0=ts;var p=Math.min((ts-t0)/1500,1);el.textContent=Math.round((1-Math.pow(1-p,3))*end)+'+';if(p<1)requestAnimationFrame(step);}
+      requestAnimationFrame(step);cObs.unobserve(el);
+    });},{threshold:.5});
+    document.querySelectorAll('.counter[data-count]').forEach(function(el){cObs.observe(el);});
+  }catch(e){console.warn('Counter error:',e);}
+
+  // ── SCROLL PROGRESS BAR ──
+  try{
+    var progressBar=document.getElementById('scroll-progress');
+    if(progressBar)window.addEventListener('scroll',function(){var h=document.documentElement.scrollHeight-innerHeight;if(h>0)progressBar.style.width=(scrollY/h*100)+'%';},{passive:true});
+  }catch(e){}
+
+  // ── FLOATING CTA ──
+  try{
+    var floatingCTA=document.getElementById('floating-cta');
+    var heroSection=document.getElementById('hero');
+    if(floatingCTA&&heroSection)new IntersectionObserver(function(e){floatingCTA.classList.toggle('visible',!e[0].isIntersecting);},{threshold:0}).observe(heroSection);
+  }catch(e){}
+
+  // ── NAVBAR SOLID ON SCROLL ──
+  try{
+    var nav=document.querySelector('nav');
+    if(nav)window.addEventListener('scroll',function(){nav.style.background=scrollY>50?'var(--bg-nav-solid)':'var(--bg-nav)';},{passive:true});
+  }catch(e){}
+
+  // ── MOBILE MENU ──
+  try{
+    var menuBtn=document.getElementById('mobile-menu-btn'),mm=document.getElementById('mobile-menu');
+    if(menuBtn&&mm){
+      menuBtn.addEventListener('click',function(){mm.classList.toggle('hidden');});
+      mm.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){mm.classList.add('hidden');});});
+    }
+  }catch(e){}
+
+  // ── PRICING TOGGLE ──
+  try{
+    var pToggle=document.getElementById('pricing-toggle');
+    var yearly=false;
+    if(pToggle)pToggle.addEventListener('click',function(){
+      yearly=!yearly;pToggle.classList.toggle('active',yearly);
+      document.querySelectorAll('.price-amount').forEach(function(el){el.textContent=yearly?el.dataset.yearly:el.dataset.monthly;});
+    });
+  }catch(e){}
+
+  // ── FAQ ACCORDION ──
+  try{
+    document.querySelectorAll('.faq-header').forEach(function(h){
+      h.addEventListener('click',function(){
+        var item=h.parentElement,wasOpen=item.classList.contains('open');
+        document.querySelectorAll('.faq-item.open').forEach(function(i){i.classList.remove('open');});
+        if(!wasOpen)item.classList.add('open');
+      });
+    });
+  }catch(e){}
+
+  // ── TESTIMONIAL SLIDER ──
+  try{
+    var track=document.getElementById('testi-track');
+    var dots=document.querySelectorAll('.testi-dot');
+    var currentSlide=0,autoTimer;
+    function goToSlide(n){currentSlide=n;if(track)track.style.transform='translateX(-'+n*100+'%)';dots.forEach(function(d,i){d.classList.toggle('active',i===n);});}
+    dots.forEach(function(d){d.addEventListener('click',function(){goToSlide(parseInt(d.dataset.slide));clearInterval(autoTimer);autoTimer=setInterval(function(){goToSlide((currentSlide+1)%3);},5000);});});
+    autoTimer=setInterval(function(){goToSlide((currentSlide+1)%3);},5000);
+  }catch(e){}
+
+  // ── SMOOTH SCROLL ──
+  try{
+    document.querySelectorAll('a[href^="#"]').forEach(function(a){
+      a.addEventListener('click',function(e){var t=document.querySelector(this.getAttribute('href'));if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'});}});
+    });
+  }catch(e){}
+
+  // ── TOAST ──
+  function showToast(msg,type){try{var t=document.getElementById('toast');t.textContent=msg;t.className='toast toast-'+type+' show';setTimeout(function(){t.classList.remove('show');},4000);}catch(e){}}
+
+  // ── SAFETY: force-reveal if animations stuck after 3s ──
+  try{
+    setTimeout(function(){
+      document.querySelectorAll('[data-reveal]:not(.revealed)').forEach(function(el){el.classList.add('revealed');});
+    },3000);
+  }catch(e){}
+
+  // ── CONTACT FORM ──
+  try{
+    var form=document.getElementById('contact-form');
+    if(form)form.addEventListener('submit',function(e){
+      e.preventDefault();
+      var t=(typeof T!=='undefined'&&T[currentLang])||{};
+      var btn=document.getElementById('contact-submit'),txt=document.getElementById('submit-text'),arrow=document.getElementById('submit-arrow'),spin=document.getElementById('submit-spinner');
+      if(btn)btn.disabled=true;if(txt)txt.textContent=t['form.sending']||'Sending...';if(arrow)arrow.classList.add('hidden');if(spin)spin.classList.remove('hidden');
+      var fd=new FormData(form),data={};fd.forEach(function(v,k){data[k]=v;});
+      fetch('/api/contact',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)})
+      .then(function(r){return r.json();})
+      .then(function(j){if(j.ok){showToast(t['toast.ok']||'Thanks!','success');form.reset();}else showToast(j.detail||t['toast.err']||'Error','error');})
+      .catch(function(){showToast(t['toast.err']||'Error','error');})
+      .finally(function(){if(btn)btn.disabled=false;if(txt)txt.textContent=t['form.submit']||'Send';if(arrow)arrow.classList.remove('hidden');if(spin)spin.classList.add('hidden');});
+    });
+  }catch(e){console.warn('Form error:',e);}
+})();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,12 @@
+{
+  "name": "virelio-landing",
+  "version": "1.0.0",
+  "description": "VirelioCreator landing page — professionele AI-gegenereerde websites voor Nederlandse bedrijven",
+  "scripts": {
+    "dev": "node server.js",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.0"
+  }
+}
