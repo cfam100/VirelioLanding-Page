@@ -6,10 +6,44 @@
   <meta name="color-scheme" content="dark light" />
   <title>VirelioCreator — Professionele Websites, Automatisch Gegenereerd</title>
   <meta name="description" content="VirelioCreator vindt jouw bedrijf op Google Maps en genereert een professionele website — volledig automatisch en op maat. Bekijk een gratis preview." />
+  <link rel="canonical" href="https://creator.virelio.nl/" />
   <meta property="og:title" content="VirelioCreator — Professionele Websites voor Jouw Bedrijf" />
   <meta property="og:description" content="AI-gegenereerde websites op maat voor Nederlandse bedrijven. Bekijk jouw gratis preview." />
   <meta property="og:type" content="website" />
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%232f6fff' width='100' height='100' rx='20'/><text x='50' y='72' font-size='60' font-family='sans-serif' fill='white' text-anchor='middle'>V</text></svg>" />
+  <meta property="og:url" content="https://creator.virelio.nl/" />
+  <meta property="og:image" content="https://creator.virelio.nl/logo.jpeg" />
+  <meta property="og:locale" content="nl_NL" />
+  <meta property="og:site_name" content="VirelioCreator" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="VirelioCreator — Professionele Websites voor Jouw Bedrijf" />
+  <meta name="twitter:description" content="AI-gegenereerde websites op maat voor Nederlandse bedrijven. Bekijk jouw gratis preview." />
+  <meta name="twitter:image" content="https://creator.virelio.nl/logo.jpeg" />
+  <meta name="robots" content="index, follow" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "VirelioCreator",
+    "url": "https://creator.virelio.nl",
+    "applicationCategory": "WebApplication",
+    "description": "AI-gegenereerde professionele websites voor Nederlandse bedrijven. Automatisch op maat gemaakt via Google Maps data.",
+    "operatingSystem": "Web",
+    "offers": {
+      "@type": "AggregateOffer",
+      "priceCurrency": "EUR",
+      "lowPrice": "0",
+      "offerCount": "3"
+    },
+    "provider": {
+      "@type": "Organization",
+      "name": "Virelio",
+      "url": "https://creator.virelio.nl"
+    },
+    "inLanguage": "nl"
+  }
+  </script>
+  <link rel="icon" type="image/jpeg" href="/logo.jpeg" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -211,7 +245,7 @@
   <div class="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
     <!-- Logo -->
     <a href="https://virelio.nl/" class="flex items-center gap-2.5">
-      <div class="w-9 h-9 rounded-lg bg-gradient-to-br from-spark-500 to-violet-500 flex items-center justify-center font-display font-bold text-white text-lg">V</div>
+      <img src="/logo.jpeg" alt="VirelioCreator logo" class="w-9 h-9 rounded-lg object-cover" />
       <span class="font-display font-bold text-lg tracking-tight" style="color:var(--text-heading)">VirelioCreator</span>
     </a>
     <!-- Desktop links -->
@@ -712,7 +746,7 @@
 <footer class="py-12 border-t" style="border-color:var(--border-subtle);background:var(--bg-footer);transition:background .4s">
   <div class="max-w-6xl mx-auto px-6">
     <div class="flex flex-col sm:flex-row items-center justify-between gap-6">
-      <a href="https://virelio.nl/" target="_blank" class="flex items-center gap-2.5"><div class="w-8 h-8 rounded-lg bg-gradient-to-br from-spark-500 to-violet-500 flex items-center justify-center font-display font-bold text-white text-sm">V</div><span class="font-display font-bold" style="color:var(--text-heading)">VirelioCreator</span></a>
+      <a href="https://virelio.nl/" target="_blank" class="flex items-center gap-2.5"><img src="/logo.jpeg" alt="VirelioCreator logo" class="w-8 h-8 rounded-lg object-cover" /><span class="font-display font-bold" style="color:var(--text-heading)">VirelioCreator</span></a>
       <div class="flex items-center gap-6 text-sm" style="color:var(--text-muted)">
         <a href="#hoe-het-werkt" class="hover:text-spark-400 transition-colors"><span data-i18n="nav.how">Zo Werkt Het</span></a>
         <a href="#pricing" class="hover:text-spark-400 transition-colors"><span data-i18n="nav.pricing">Prijzen</span></a>
@@ -1270,9 +1304,9 @@ var FLAGS={nl:'https://flagcdn.com/w40/nl.png',en:'https://flagcdn.com/w40/gb.pn
       var btn=document.getElementById('contact-submit'),txt=document.getElementById('submit-text'),arrow=document.getElementById('submit-arrow'),spin=document.getElementById('submit-spinner');
       if(btn)btn.disabled=true;if(txt)txt.textContent=t['form.sending']||'Sending...';if(arrow)arrow.classList.add('hidden');if(spin)spin.classList.remove('hidden');
       var fd=new FormData(form),data={};fd.forEach(function(v,k){data[k]=v;});
-      fetch('/api/contact',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)})
+      fetch('https://formspree.io/f/mqaqryyn',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(data)})
       .then(function(r){return r.json();})
-      .then(function(j){if(j.ok){showToast(t['toast.ok']||'Thanks!','success');form.reset();}else showToast(j.detail||t['toast.err']||'Error','error');})
+      .then(function(j){if(j.ok){showToast(t['toast.ok']||'Thanks!','success');form.reset();}else showToast(j.errors&&j.errors[0]&&j.errors[0].message||t['toast.err']||'Error','error');})
       .catch(function(){showToast(t['toast.err']||'Error','error');})
       .finally(function(){if(btn)btn.disabled=false;if(txt)txt.textContent=t['form.submit']||'Send';if(arrow)arrow.classList.remove('hidden');if(spin)spin.classList.add('hidden');});
     });
