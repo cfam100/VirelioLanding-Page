@@ -132,6 +132,75 @@
   .browser-dot{width:10px;height:10px;border-radius:50%;}
   .browser-bar{flex:1;height:28px;background:var(--browser-bar);border-radius:6px;margin-left:12px;display:flex;align-items:center;padding:0 12px;font-size:11px;color:var(--browser-text);font-family:'DM Sans',monospace;transition:background .4s,color .4s;}
 
+  /* ── Mockup interiors — Salon (dark luxury) ── */
+  .mock-s{background:#0c0c11;position:relative;overflow:hidden;font-family:'DM Sans',system-ui,sans-serif;}
+  .mock-s::before{content:'';position:absolute;top:-40%;right:-20%;width:80%;height:80%;background:radial-gradient(circle,rgba(200,169,110,.1) 0%,transparent 70%);pointer-events:none;}
+  .mock-s-nav{display:flex;align-items:center;justify-content:space-between;padding:12px 20px;position:relative;z-index:2;}
+  .mock-s-logo{display:flex;align-items:center;gap:7px;color:#c8a96e;font-size:10px;font-weight:700;letter-spacing:.04em;}
+  .mock-s-logo-mark{width:20px;height:20px;border-radius:6px;background:linear-gradient(135deg,#c8a96e,#a68542);display:flex;align-items:center;justify-content:center;}
+  .mock-s-links{display:flex;gap:14px;font-size:9px;color:rgba(255,255,255,.35);letter-spacing:.02em;}
+  .mock-s-cta-sm{font-size:8.5px;font-weight:600;color:#0c0c11;background:linear-gradient(135deg,#c8a96e,#dbb978);padding:5px 12px;border-radius:8px;}
+  .mock-s-hero{padding:28px 20px 20px;position:relative;z-index:2;}
+  .mock-s-overline{font-size:8px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#c8a96e;margin-bottom:12px;opacity:.7;}
+  .mock-s-h1{font-size:24px;font-weight:800;line-height:1.1;color:#fff;margin-bottom:8px;letter-spacing:-.02em;}
+  .mock-s-h1 span{background:linear-gradient(135deg,#c8a96e 30%,#f0d48a);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+  .mock-s-sub{font-size:10px;color:rgba(255,255,255,.4);line-height:1.6;max-width:280px;margin-bottom:18px;}
+  .mock-s-btns{display:flex;gap:8px;margin-bottom:24px;}
+  .mock-s-btn1{background:linear-gradient(135deg,#c8a96e,#dbb978);color:#0c0c11;font-size:9.5px;font-weight:700;padding:8px 18px;border-radius:10px;letter-spacing:.01em;box-shadow:0 4px 16px rgba(200,169,110,.25);}
+  .mock-s-btn2{background:rgba(255,255,255,.06);color:rgba(255,255,255,.6);font-size:9.5px;font-weight:600;padding:8px 18px;border-radius:10px;border:1px solid rgba(255,255,255,.08);}
+  .mock-s-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;padding:0 20px 18px;position:relative;z-index:2;}
+  .mock-s-card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);border-radius:12px;padding:14px 10px;text-align:center;transition:border-color .3s;}
+  .mock-s-card-icon{width:28px;height:28px;margin:0 auto 8px;border-radius:8px;background:rgba(200,169,110,.1);display:flex;align-items:center;justify-content:center;}
+  .mock-s-card-name{font-size:9px;font-weight:600;color:rgba(255,255,255,.8);display:block;}
+  .mock-s-card-price{font-size:8px;color:rgba(200,169,110,.6);display:block;margin-top:3px;}
+  .mock-s-review{margin:0 20px 18px;padding:12px 14px;background:rgba(255,255,255,.025);border:1px solid rgba(255,255,255,.05);border-radius:12px;position:relative;z-index:2;}
+  .mock-s-review-head{display:flex;align-items:center;gap:6px;margin-bottom:8px;}
+  .mock-s-review-g{width:16px;height:16px;flex-shrink:0;}
+  .mock-s-review-stars{color:#c8a96e;font-size:9px;letter-spacing:1px;}
+  .mock-s-review-score{font-size:9px;font-weight:700;color:rgba(255,255,255,.5);margin-left:auto;}
+  .mock-s-review-body{display:flex;gap:8px;align-items:flex-start;}
+  .mock-s-review-av{width:22px;height:22px;border-radius:50%;background:linear-gradient(135deg,#c8a96e,#8b6914);flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:9px;color:#0c0c11;font-weight:700;}
+  .mock-s-review-meta{font-size:8.5px;font-weight:600;color:rgba(255,255,255,.6);}
+  .mock-s-review-date{font-size:7.5px;color:rgba(255,255,255,.25);margin-left:6px;}
+  .mock-s-review-txt{font-size:8.5px;color:rgba(255,255,255,.3);line-height:1.5;margin-top:3px;font-style:italic;}
+
+  /* ── Mockup interiors — Dentist (clean medical) ── */
+  .mock-d{background:#fafbfc;position:relative;overflow:hidden;font-family:'DM Sans',system-ui,sans-serif;}
+  .mock-d::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 50% at 85% 20%,rgba(186,230,253,.25) 0%,transparent 70%);pointer-events:none;}
+  .mock-d-nav{display:flex;align-items:center;justify-content:space-between;padding:12px 20px;border-bottom:1px solid #f1f5f9;position:relative;z-index:2;}
+  .mock-d-logo{display:flex;align-items:center;gap:7px;font-size:10px;font-weight:700;color:#0f172a;}
+  .mock-d-logo-mark{width:20px;height:20px;border-radius:6px;background:linear-gradient(135deg,#0284c7,#38bdf8);display:flex;align-items:center;justify-content:center;}
+  .mock-d-links{display:flex;gap:14px;font-size:9px;color:#94a3b8;}
+  .mock-d-cta-sm{font-size:8.5px;font-weight:600;color:#fff;background:#0f172a;padding:5px 12px;border-radius:8px;}
+  .mock-d-hero{padding:24px 20px 20px;position:relative;z-index:2;display:grid;grid-template-columns:1fr 100px;gap:16px;align-items:center;}
+  .mock-d-overline{font-size:8px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#0284c7;margin-bottom:10px;}
+  .mock-d-h1{font-size:22px;font-weight:800;line-height:1.12;color:#0f172a;margin-bottom:8px;letter-spacing:-.02em;}
+  .mock-d-h1 span{color:#0284c7;}
+  .mock-d-sub{font-size:10px;color:#64748b;line-height:1.6;margin-bottom:16px;}
+  .mock-d-rating{display:flex;align-items:center;gap:6px;margin-bottom:16px;}
+  .mock-d-rating-stars{color:#f59e0b;font-size:10px;letter-spacing:1px;}
+  .mock-d-rating-text{font-size:9px;color:#94a3b8;}
+  .mock-d-btns{display:flex;gap:8px;}
+  .mock-d-btn1{background:#0f172a;color:#fff;font-size:9.5px;font-weight:700;padding:8px 18px;border-radius:10px;box-shadow:0 4px 16px rgba(15,23,42,.15);}
+  .mock-d-btn2{background:#fff;color:#334155;font-size:9.5px;font-weight:600;padding:8px 18px;border-radius:10px;border:1px solid #e2e8f0;}
+  .mock-d-img{width:90px;height:90px;border-radius:50%;background:linear-gradient(160deg,#e0f2fe 0%,#bae6fd 100%);display:flex;align-items:center;justify-content:center;box-shadow:0 12px 32px rgba(2,132,199,.1),0 0 0 1px rgba(2,132,199,.06);position:relative;}
+  .mock-d-divider{height:1px;background:linear-gradient(90deg,transparent,#e2e8f0,transparent);margin:0 20px;}
+  .mock-d-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;padding:16px 20px;position:relative;z-index:2;}
+  .mock-d-card{background:#fff;border:1px solid #f1f5f9;border-radius:12px;padding:12px 8px;text-align:center;box-shadow:0 1px 3px rgba(0,0,0,.04);}
+  .mock-d-card-icon{width:28px;height:28px;margin:0 auto 6px;border-radius:8px;background:#f0f9ff;display:flex;align-items:center;justify-content:center;}
+  .mock-d-card-name{font-size:9px;font-weight:600;color:#0f172a;display:block;}
+  .mock-d-card-sub{font-size:7.5px;color:#94a3b8;display:block;margin-top:2px;}
+  .mock-d-review{margin:8px 20px 16px;padding:12px 14px;background:#f8fafc;border:1px solid #f1f5f9;border-radius:12px;position:relative;z-index:2;}
+  .mock-d-review-head{display:flex;align-items:center;gap:6px;margin-bottom:8px;}
+  .mock-d-review-g{width:16px;height:16px;flex-shrink:0;}
+  .mock-d-review-stars{color:#f59e0b;font-size:9px;letter-spacing:1px;}
+  .mock-d-review-score{font-size:9px;font-weight:700;color:#64748b;margin-left:auto;}
+  .mock-d-review-body{display:flex;gap:8px;align-items:flex-start;}
+  .mock-d-review-av{width:22px;height:22px;border-radius:50%;background:linear-gradient(135deg,#e0f2fe,#0284c7);flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:9px;color:#fff;font-weight:700;}
+  .mock-d-review-meta{font-size:8.5px;font-weight:600;color:#334155;}
+  .mock-d-review-date{font-size:7.5px;color:#94a3b8;margin-left:6px;}
+  .mock-d-review-txt{font-size:8.5px;color:#64748b;line-height:1.5;margin-top:3px;font-style:italic;}
+
   /* ── Cards ── */
   .feature-card{background:var(--bg-card);border:1px solid var(--bg-card-border);border-radius:16px;padding:2rem;transition:all .4s cubic-bezier(.16,1,.3,1);}
   .feature-card:hover{background:var(--bg-card-hover);border-color:var(--bg-card-border-hover);transform:translateY(-4px);box-shadow:var(--shadow-card);}
@@ -488,15 +557,57 @@
       <div data-reveal="slide-left" class="device-perspective">
         <div class="device-frame">
           <div class="browser-chrome"><div class="browser-dot" style="background:#ff5f57"></div><div class="browser-dot" style="background:#febc2e"></div><div class="browser-dot" style="background:#28c840"></div><div class="browser-bar"><svg class="w-3 h-3 mr-1.5" style="color:var(--browser-text)" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"/></svg>virelio.nl/site/de-gouden-schaar</div></div>
-          <div class="rounded-b-xl overflow-hidden" style="background:linear-gradient(135deg,#1a1a2e,#16213e)">
-            <div class="p-8 sm:p-10 min-h-[320px] relative">
-              <div class="absolute inset-0 opacity-30" style="background:url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 300%22><rect fill=%22%23c8a96e%22 x=%220%22 y=%220%22 width=%22400%22 height=%22300%22 rx=%220%22 opacity=%220.1%22/><circle cx=%22320%22 cy=%2260%22 r=%2280%22 fill=%22%23c8a96e%22 opacity=%220.08%22/></svg>') center/cover"></div>
-              <div class="relative z-10">
-                <div class="inline-block px-3 py-1 rounded-full text-[10px] font-semibold uppercase tracking-wider mb-4" style="background:rgba(200,169,110,.15);color:#c8a96e">Kapsalon</div>
-                <h3 class="font-display font-800 text-2xl sm:text-3xl text-white mb-3">De Gouden Schaar</h3>
-                <p class="text-sm text-gray-400 mb-6 max-w-sm">De beste kapper van Amsterdam-Oost. Meer dan 150 tevreden klanten en 4.8 sterren op Google.</p>
-                <div class="flex items-center gap-3 mb-6"><div class="flex text-amber-400 text-sm">&#9733;&#9733;&#9733;&#9733;&#9733;</div><span class="text-xs text-gray-500">4.8 (156 reviews)</span></div>
-                <div class="flex gap-3"><div class="px-5 py-2 rounded-full text-sm font-semibold" style="background:#c8a96e;color:#1a1a2e">Maak Afspraak</div><div class="px-5 py-2 rounded-full text-sm font-semibold border border-white/20 text-white/70">Bekijk Menu</div></div>
+          <div class="rounded-b-xl overflow-hidden mock-s" style="min-height:360px;">
+            <!-- nav -->
+            <div class="mock-s-nav">
+              <div class="mock-s-logo">
+                <div class="mock-s-logo-mark"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#0c0c11" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><line x1="20" y1="4" x2="8.12" y2="15.88"/><line x1="14.47" y1="14.48" x2="20" y2="20"/><line x1="8.12" y1="8.12" x2="12" y2="12"/></svg></div>
+                De Gouden Schaar
+              </div>
+              <div class="mock-s-links"><span data-i18n="mock.s.nav1">Diensten</span><span data-i18n="mock.s.nav2">Portfolio</span><span data-i18n="mock.s.nav3">Contact</span></div>
+              <span class="mock-s-cta-sm" data-i18n="mock.s.cta">Boek Nu</span>
+            </div>
+            <!-- hero -->
+            <div class="mock-s-hero">
+              <p class="mock-s-overline" data-i18n="mock.s.overline">Premium Kapsalon</p>
+              <h3 class="mock-s-h1" data-i18n-html="mock.s.h1">Jouw Stijl,<br><span>Ons Vakmanschap.</span></h3>
+              <p class="mock-s-sub" data-i18n="mock.s.sub">Al 15 jaar de beste kapper van Amsterdam-Oost. 156 vijfsterren reviews op Google.</p>
+              <div class="mock-s-btns">
+                <span class="mock-s-btn1" data-i18n="mock.s.btn1">Maak Afspraak</span>
+                <span class="mock-s-btn2" data-i18n="mock.s.btn2">Bekijk Diensten</span>
+              </div>
+            </div>
+            <!-- services -->
+            <div class="mock-s-grid">
+              <div class="mock-s-card">
+                <div class="mock-s-card-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#c8a96e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><line x1="20" y1="4" x2="8.12" y2="15.88"/><line x1="14.47" y1="14.48" x2="20" y2="20"/><line x1="8.12" y1="8.12" x2="12" y2="12"/></svg></div>
+                <span class="mock-s-card-name" data-i18n="mock.s.svc1">Knippen</span>
+                <span class="mock-s-card-price" data-i18n="mock.s.svc1p">v.a. &euro;25</span>
+              </div>
+              <div class="mock-s-card">
+                <div class="mock-s-card-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#c8a96e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 20l4-16m2 16l4-16M3 8h18M3 16h18"/></svg></div>
+                <span class="mock-s-card-name" data-i18n="mock.s.svc2">Kleuren</span>
+                <span class="mock-s-card-price" data-i18n="mock.s.svc2p">v.a. &euro;55</span>
+              </div>
+              <div class="mock-s-card">
+                <div class="mock-s-card-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#c8a96e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9z"/></svg></div>
+                <span class="mock-s-card-name" data-i18n="mock.s.svc3">Styling</span>
+                <span class="mock-s-card-price" data-i18n="mock.s.svc3p">v.a. &euro;30</span>
+              </div>
+            </div>
+            <!-- google review -->
+            <div class="mock-s-review">
+              <div class="mock-s-review-head">
+                <svg class="mock-s-review-g" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+                <span class="mock-s-review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                <span class="mock-s-review-score" data-i18n="mock.s.rscore">4.8 &middot; 156 reviews</span>
+              </div>
+              <div class="mock-s-review-body">
+                <div class="mock-s-review-av">S</div>
+                <div style="flex:1;">
+                  <span class="mock-s-review-meta">Sophie van der Berg<span class="mock-s-review-date" data-i18n="mock.s.rdate">2 dagen geleden</span></span>
+                  <p class="mock-s-review-txt" data-i18n="mock.s.rtext">"Fantastische kapper! Precies wat ik wilde. Perfecte sfeer en resultaat."</p>
+                </div>
               </div>
             </div>
           </div>
@@ -520,17 +631,82 @@
       <div data-reveal="slide-right" class="device-perspective order-1 lg:order-2">
         <div class="device-frame-right">
           <div class="browser-chrome"><div class="browser-dot" style="background:#ff5f57"></div><div class="browser-dot" style="background:#febc2e"></div><div class="browser-dot" style="background:#28c840"></div><div class="browser-bar"><svg class="w-3 h-3 mr-1.5" style="color:var(--browser-text)" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"/></svg>virelio.nl/site/tandarts-de-jordaan</div></div>
-          <div class="rounded-b-xl overflow-hidden" style="background:linear-gradient(135deg,#f0f9ff,#e0f2fe)">
-            <div class="p-8 sm:p-10 min-h-[320px]">
-              <div class="inline-block px-3 py-1 rounded-full text-[10px] font-semibold uppercase tracking-wider mb-4" style="background:rgba(2,132,199,.1);color:#0284c7">Tandartspraktijk</div>
-              <h3 class="font-display font-800 text-2xl sm:text-3xl mb-3" style="color:#0f172a">Tandarts De Jordaan</h3>
-              <p class="text-sm mb-6 max-w-sm" style="color:#475569">Persoonlijke tandzorg in het hart van de Jordaan. Al 20 jaar uw vertrouwde tandarts.</p>
-              <div class="flex items-center gap-3 mb-6"><div class="flex text-amber-400 text-sm">&#9733;&#9733;&#9733;&#9733;&#9734;</div><span class="text-xs" style="color:#94a3b8">4.6 (89 reviews)</span></div>
-              <div class="grid grid-cols-3 gap-3 mb-6"><div class="rounded-xl p-3 text-center" style="background:white;box-shadow:0 1px 3px rgba(0,0,0,.05)"><div class="text-lg mb-0.5">🦷</div><div class="text-[10px] font-semibold" style="color:#0f172a">Controle</div></div><div class="rounded-xl p-3 text-center" style="background:white;box-shadow:0 1px 3px rgba(0,0,0,.05)"><div class="text-lg mb-0.5">✨</div><div class="text-[10px] font-semibold" style="color:#0f172a">Whitening</div></div><div class="rounded-xl p-3 text-center" style="background:white;box-shadow:0 1px 3px rgba(0,0,0,.05)"><div class="text-lg mb-0.5">🔧</div><div class="text-[10px] font-semibold" style="color:#0f172a">Vullingen</div></div></div>
-              <div class="flex gap-3"><div class="px-5 py-2 rounded-full text-sm font-semibold text-white" style="background:#0284c7">Maak Afspraak</div><div class="px-5 py-2 rounded-full text-sm font-semibold" style="border:1px solid #cbd5e1;color:#475569">Bel Ons</div></div>
+          <div class="rounded-b-xl overflow-hidden mock-d" style="min-height:360px;">
+            <!-- nav -->
+            <div class="mock-d-nav">
+              <div class="mock-d-logo">
+                <div class="mock-d-logo-mark"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"><rect x="4" y="10" width="16" height="4" rx="1" fill="#fff"/><rect x="10" y="4" width="4" height="16" rx="1" fill="#fff"/></svg></div>
+                Tandarts De Jordaan
+              </div>
+              <div class="mock-d-links"><span data-i18n="mock.d.nav1">Behandelingen</span><span data-i18n="mock.d.nav2">Team</span><span data-i18n="mock.d.nav3">Contact</span></div>
+              <span class="mock-d-cta-sm" data-i18n="mock.d.cta">Afspraak</span>
+            </div>
+            <!-- hero -->
+            <div class="mock-d-hero">
+              <div>
+                <p class="mock-d-overline" data-i18n="mock.d.overline">Tandartspraktijk</p>
+                <h3 class="mock-d-h1" data-i18n-html="mock.d.h1">Persoonlijke<br><span>Tandzorg</span> in<br>De Jordaan.</h3>
+                <p class="mock-d-sub" data-i18n="mock.d.sub">Al 20 jaar uw vertrouwde tandarts. Persoonlijk, pijnloos en professioneel.</p>
+                <div class="mock-d-rating">
+                  <span class="mock-d-rating-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                  <span class="mock-d-rating-text" data-i18n="mock.d.rtext">4.6 &middot; 89 reviews</span>
+                </div>
+                <div class="mock-d-btns">
+                  <span class="mock-d-btn1" data-i18n="mock.d.btn1">Maak Afspraak</span>
+                  <span class="mock-d-btn2">020 555 1234</span>
+                </div>
+              </div>
+              <div class="mock-d-img"><svg width="44" height="44" viewBox="0 0 48 48" fill="none"><path d="M24 6C19 6 15 9 13.5 13C12 17 12 22 13.5 27C15 32 18 38 20 40.5C21 42 22.5 43 24 43C25.5 43 27 42 28 40.5C30 38 33 32 34.5 27C36 22 36 17 34.5 13C33 9 29 6 24 6Z" fill="white" stroke="#0284c7" stroke-width="1.5"/><path d="M19 20C19.5 17 21.5 15 24 15C26.5 15 28.5 17 29 20" stroke="#0284c7" stroke-width="1.2" stroke-linecap="round" fill="none"/><circle cx="20.5" cy="24" r="1.5" fill="#bae6fd"/><circle cx="27.5" cy="24" r="1.5" fill="#bae6fd"/></svg></div>
+            </div>
+            <!-- divider -->
+            <div class="mock-d-divider"></div>
+            <!-- services -->
+            <div class="mock-d-grid">
+              <div class="mock-d-card">
+                <div class="mock-d-card-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0284c7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+                <span class="mock-d-card-name" data-i18n="mock.d.svc1">Controle</span>
+                <span class="mock-d-card-sub" data-i18n="mock.d.svc1s">2x per jaar</span>
+              </div>
+              <div class="mock-d-card">
+                <div class="mock-d-card-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0284c7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M5.5 8.5l13 7M5.5 15.5l13-7"/></svg></div>
+                <span class="mock-d-card-name" data-i18n="mock.d.svc2">Whitening</span>
+                <span class="mock-d-card-sub" data-i18n="mock.d.svc2s">Professioneel</span>
+              </div>
+              <div class="mock-d-card">
+                <div class="mock-d-card-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0284c7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+                <span class="mock-d-card-name" data-i18n="mock.d.svc3">Vullingen</span>
+                <span class="mock-d-card-sub" data-i18n="mock.d.svc3s">Pijnloos</span>
+              </div>
+              <div class="mock-d-card">
+                <div class="mock-d-card-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0284c7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3h7l2 2h9v14H3z"/><path d="M7 12h10"/><path d="M12 7v10"/></svg></div>
+                <span class="mock-d-card-name" data-i18n="mock.d.svc4">Kronen</span>
+                <span class="mock-d-card-sub" data-i18n="mock.d.svc4s">Keramisch</span>
+              </div>
+            </div>
+            <!-- google review -->
+            <div class="mock-d-review">
+              <div class="mock-d-review-head">
+                <svg class="mock-d-review-g" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+                <span class="mock-d-review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                <span class="mock-d-review-score" data-i18n="mock.d.rscore">4.6 &middot; 89 reviews</span>
+              </div>
+              <div class="mock-d-review-body">
+                <div class="mock-d-review-av">M</div>
+                <div style="flex:1;">
+                  <span class="mock-d-review-meta">Mark de Vries<span class="mock-d-review-date" data-i18n="mock.d.rdate">1 week geleden</span></span>
+                  <p class="mock-d-review-txt" data-i18n="mock.d.rtext2">"Altijd fijn geholpen. Pijnloze behandelingen. Absolute aanrader!"</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
+      </div>
+    </div>
+    <!-- Examples disclaimer -->
+    <div data-reveal class="mt-16 flex justify-center">
+      <div class="flex items-start gap-3 px-6 py-4 rounded-2xl max-w-xl text-left" style="background:var(--bg-card);border:1px solid var(--bg-card-border);">
+        <svg class="w-5 h-5 flex-shrink-0 mt-0.5 text-spark-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        <p class="text-sm leading-relaxed" style="color:var(--text-muted)" data-i18n="port.disclaimer">Dit zijn slechts voorbeelden. Wij maken een unieke website op maat voor elk type bedrijf — van restaurant tot autobedrijf, van kapper tot accountant.</p>
       </div>
     </div>
   </div>
@@ -857,6 +1033,28 @@ nl:{
   'port.p1.c1':'Automatisch herkende merkkleur (goud)','port.p1.c2':'156 Google Reviews geïntegreerd','port.p1.c3':'AI-geschreven diensten & beschrijvingen',
   'port.p2.badge':'Modern Template','port.p2.title':'Tandartsen & Klinieken','port.p2.desc':'Schone, vertrouwenwekkende designs met een professionele uitstraling. Ideaal voor medische praktijken en fysiotherapeuten.',
   'port.p2.c1':'Vertrouwenwekkende blauwe kleurpaletten','port.p2.c2':'Openingstijden & locatie prominent','port.p2.c3':'Behandelingen met duidelijke beschrijvingen',
+  'port.disclaimer':'Dit zijn slechts voorbeelden. Wij maken een unieke website op maat voor elk type bedrijf \u2014 van restaurant tot autobedrijf, van kapper tot accountant.',
+  'mock.s.nav1':'Diensten','mock.s.nav2':'Portfolio','mock.s.nav3':'Contact',
+  'mock.s.cta':'Boek Nu',
+  'mock.s.overline':'Premium Kapsalon',
+  'mock.s.h1':'Jouw Stijl,<br><span>Ons Vakmanschap.</span>',
+  'mock.s.sub':'Al 15 jaar de beste kapper van Amsterdam-Oost. 156 vijfsterren reviews op Google.',
+  'mock.s.btn1':'Maak Afspraak','mock.s.btn2':'Bekijk Diensten',
+  'mock.s.svc1':'Knippen','mock.s.svc2':'Kleuren','mock.s.svc3':'Styling',
+  'mock.s.svc1p':'v.a. \u20ac25','mock.s.svc2p':'v.a. \u20ac55','mock.s.svc3p':'v.a. \u20ac30',
+  'mock.s.rscore':'4.8 \u00b7 156 reviews','mock.s.rdate':'2 dagen geleden',
+  'mock.s.rtext':'\u201cFantastische kapper! Precies wat ik wilde. Perfecte sfeer en resultaat.\u201d',
+  'mock.d.nav1':'Behandelingen','mock.d.nav2':'Team','mock.d.nav3':'Contact',
+  'mock.d.cta':'Afspraak',
+  'mock.d.overline':'Tandartspraktijk',
+  'mock.d.h1':'Persoonlijke<br><span>Tandzorg</span> in<br>De Jordaan.',
+  'mock.d.sub':'Al 20 jaar uw vertrouwde tandarts. Persoonlijk, pijnloos en professioneel.',
+  'mock.d.btn1':'Maak Afspraak',
+  'mock.d.rtext':'4.6 \u00b7 89 reviews',
+  'mock.d.svc1':'Controle','mock.d.svc2':'Whitening','mock.d.svc3':'Vullingen','mock.d.svc4':'Kronen',
+  'mock.d.svc1s':'2x per jaar','mock.d.svc2s':'Professioneel','mock.d.svc3s':'Pijnloos','mock.d.svc4s':'Keramisch',
+  'mock.d.rscore':'4.6 \u00b7 89 reviews','mock.d.rdate':'1 week geleden',
+  'mock.d.rtext2':'\u201cAltijd fijn geholpen. Pijnloze behandelingen. Absolute aanrader!\u201d',
   'price.label':'Prijzen','price.title':'Eenvoudige, transparante prijzen','price.sub':'Start gratis. Upgrade wanneer je klaar bent om live te gaan.',
   'price.monthly':'Maandelijks','price.yearly':'Jaarlijks','price.save':'-20%','price.popular':'Meest Gekozen','price.permonth':'/maand',
   'price.t1.name':'Preview','price.t1.price':'Gratis','price.t1.desc':'Bekijk hoe jouw website eruitziet. Geen verplichtingen.',
@@ -908,6 +1106,28 @@ en:{
   'port.p1.c1':'Auto-detected brand color (gold)','port.p1.c2':'156 Google Reviews integrated','port.p1.c3':'AI-written services & descriptions',
   'port.p2.badge':'Modern Template','port.p2.title':'Dentists & Clinics','port.p2.desc':'Clean, trust-building designs with a professional look. Ideal for medical practices and physiotherapists.',
   'port.p2.c1':'Trustworthy blue color palettes','port.p2.c2':'Opening hours & location prominent','port.p2.c3':'Treatments with clear descriptions',
+  'port.disclaimer':'These are just examples. We create a unique, custom website for any type of business \u2014 from restaurants to car dealerships, from salons to accountants.',
+  'mock.s.nav1':'Services','mock.s.nav2':'Portfolio','mock.s.nav3':'Contact',
+  'mock.s.cta':'Book Now',
+  'mock.s.overline':'Premium Hair Salon',
+  'mock.s.h1':'Your Style,<br><span>Our Craft.</span>',
+  'mock.s.sub':'15 years the best hairdresser in Amsterdam-East. 156 five-star reviews on Google.',
+  'mock.s.btn1':'Book Appointment','mock.s.btn2':'View Services',
+  'mock.s.svc1':'Haircut','mock.s.svc2':'Coloring','mock.s.svc3':'Styling',
+  'mock.s.svc1p':'from \u20ac25','mock.s.svc2p':'from \u20ac55','mock.s.svc3p':'from \u20ac30',
+  'mock.s.rscore':'4.8 \u00b7 156 reviews','mock.s.rdate':'2 days ago',
+  'mock.s.rtext':'\u201cAmazing hairdresser! Exactly what I wanted. Perfect atmosphere and result.\u201d',
+  'mock.d.nav1':'Treatments','mock.d.nav2':'Team','mock.d.nav3':'Contact',
+  'mock.d.cta':'Appointment',
+  'mock.d.overline':'Dental Practice',
+  'mock.d.h1':'Personal<br><span>Dental Care</span> in<br>De Jordaan.',
+  'mock.d.sub':'Your trusted dentist for 20 years. Personal, painless and professional.',
+  'mock.d.btn1':'Book Appointment',
+  'mock.d.rtext':'4.6 \u00b7 89 reviews',
+  'mock.d.svc1':'Check-up','mock.d.svc2':'Whitening','mock.d.svc3':'Fillings','mock.d.svc4':'Crowns',
+  'mock.d.svc1s':'2x per year','mock.d.svc2s':'Professional','mock.d.svc3s':'Painless','mock.d.svc4s':'Ceramic',
+  'mock.d.rscore':'4.6 \u00b7 89 reviews','mock.d.rdate':'1 week ago',
+  'mock.d.rtext2':'\u201cAlways well taken care of. Painless treatments. Highly recommended!\u201d',
   'price.label':'Pricing','price.title':'Simple, transparent pricing','price.sub':'Start free. Upgrade when you\'re ready to go live.',
   'price.monthly':'Monthly','price.yearly':'Yearly','price.save':'-20%','price.popular':'Most Popular','price.permonth':'/month',
   'price.t1.name':'Preview','price.t1.price':'Free','price.t1.desc':'See what your website looks like. No obligations.',
@@ -959,6 +1179,28 @@ es:{
   'port.p1.c1':'Color de marca detectado (dorado)','port.p1.c2':'156 Google Reviews integradas','port.p1.c3':'Servicios y descripciones escritos por IA',
   'port.p2.badge':'Plantilla Moderna','port.p2.title':'Dentistas y Clínicas','port.p2.desc':'Diseños limpios y profesionales que generan confianza. Ideal para consultas médicas y fisioterapeutas.',
   'port.p2.c1':'Paletas de colores azules confiables','port.p2.c2':'Horarios y ubicación destacados','port.p2.c3':'Tratamientos con descripciones claras',
+  'port.disclaimer':'Estos son solo ejemplos. Creamos un sitio web \u00fanico y personalizado para cualquier tipo de negocio \u2014 desde restaurantes hasta concesionarios, desde peluquer\u00edas hasta contadores.',
+  'mock.s.nav1':'Servicios','mock.s.nav2':'Portfolio','mock.s.nav3':'Contacto',
+  'mock.s.cta':'Reservar',
+  'mock.s.overline':'Peluquer\u00eda Premium',
+  'mock.s.h1':'Tu Estilo,<br><span>Nuestra Artesan\u00eda.</span>',
+  'mock.s.sub':'15 a\u00f1os el mejor peluquero de Amsterdam-Este. 156 rese\u00f1as de cinco estrellas en Google.',
+  'mock.s.btn1':'Reservar Cita','mock.s.btn2':'Ver Servicios',
+  'mock.s.svc1':'Corte','mock.s.svc2':'Color','mock.s.svc3':'Peinado',
+  'mock.s.svc1p':'desde \u20ac25','mock.s.svc2p':'desde \u20ac55','mock.s.svc3p':'desde \u20ac30',
+  'mock.s.rscore':'4.8 \u00b7 156 rese\u00f1as','mock.s.rdate':'hace 2 d\u00edas',
+  'mock.s.rtext':'\u201c\u00a1Peluquero incre\u00edble! Exactamente lo que quer\u00eda. Ambiente y resultado perfecto.\u201d',
+  'mock.d.nav1':'Tratamientos','mock.d.nav2':'Equipo','mock.d.nav3':'Contacto',
+  'mock.d.cta':'Cita',
+  'mock.d.overline':'Cl\u00ednica Dental',
+  'mock.d.h1':'Cuidado<br><span>Dental</span> Personal<br>en De Jordaan.',
+  'mock.d.sub':'Su dentista de confianza desde hace 20 a\u00f1os. Personal, indoloro y profesional.',
+  'mock.d.btn1':'Reservar Cita',
+  'mock.d.rtext':'4.6 \u00b7 89 rese\u00f1as',
+  'mock.d.svc1':'Control','mock.d.svc2':'Blanqueamiento','mock.d.svc3':'Empastes','mock.d.svc4':'Coronas',
+  'mock.d.svc1s':'2x al a\u00f1o','mock.d.svc2s':'Profesional','mock.d.svc3s':'Indoloro','mock.d.svc4s':'Cer\u00e1mica',
+  'mock.d.rscore':'4.6 \u00b7 89 rese\u00f1as','mock.d.rdate':'hace 1 semana',
+  'mock.d.rtext2':'\u201c\u00a1Siempre bien atendido! Tratamientos indoloros. \u00a1Muy recomendable!\u201d',
   'price.label':'Precios','price.title':'Precios simples y transparentes','price.sub':'Empieza gratis. Actualiza cuando estés listo.',
   'price.monthly':'Mensual','price.yearly':'Anual','price.save':'-20%','price.popular':'Más Popular','price.permonth':'/mes',
   'price.t1.name':'Vista Previa','price.t1.price':'Gratis','price.t1.desc':'Mira cómo se ve tu sitio web. Sin obligaciones.',
@@ -1010,6 +1252,28 @@ de:{
   'port.p1.c1':'Automatisch erkannte Markenfarbe (Gold)','port.p1.c2':'156 Google Reviews integriert','port.p1.c3':'KI-geschriebene Dienstleistungen',
   'port.p2.badge':'Modernes Template','port.p2.title':'Zahnärzte & Kliniken','port.p2.desc':'Saubere, vertrauensbildende Designs mit professioneller Ausstrahlung. Ideal für Arztpraxen und Physiotherapeuten.',
   'port.p2.c1':'Vertrauenswürdige blaue Farbpaletten','port.p2.c2':'Öffnungszeiten & Standort prominent','port.p2.c3':'Behandlungen mit klaren Beschreibungen',
+  'port.disclaimer':'Dies sind nur Beispiele. Wir erstellen eine einzigartige, ma\u00dfgeschneiderte Website f\u00fcr jede Art von Unternehmen \u2014 vom Restaurant bis zum Autohaus, vom Friseursalon bis zum Steuerberater.',
+  'mock.s.nav1':'Leistungen','mock.s.nav2':'Portfolio','mock.s.nav3':'Kontakt',
+  'mock.s.cta':'Buchen',
+  'mock.s.overline':'Premium Friseursalon',
+  'mock.s.h1':'Dein Stil,<br><span>Unser Handwerk.</span>',
+  'mock.s.sub':'Seit 15 Jahren der beste Friseur in Amsterdam-Ost. 156 F\u00fcnf-Sterne-Bewertungen auf Google.',
+  'mock.s.btn1':'Termin Buchen','mock.s.btn2':'Leistungen Ansehen',
+  'mock.s.svc1':'Schneiden','mock.s.svc2':'F\u00e4rben','mock.s.svc3':'Styling',
+  'mock.s.svc1p':'ab \u20ac25','mock.s.svc2p':'ab \u20ac55','mock.s.svc3p':'ab \u20ac30',
+  'mock.s.rscore':'4.8 \u00b7 156 Bewertungen','mock.s.rdate':'vor 2 Tagen',
+  'mock.s.rtext':'\u201cFantastischer Friseur! Genau was ich wollte. Perfekte Atmosph\u00e4re und Ergebnis.\u201d',
+  'mock.d.nav1':'Behandlungen','mock.d.nav2':'Team','mock.d.nav3':'Kontakt',
+  'mock.d.cta':'Termin',
+  'mock.d.overline':'Zahnarztpraxis',
+  'mock.d.h1':'Pers\u00f6nliche<br><span>Zahnpflege</span> in<br>De Jordaan.',
+  'mock.d.sub':'Seit 20 Jahren Ihr vertrauensw\u00fcrdiger Zahnarzt. Pers\u00f6nlich, schmerzfrei und professionell.',
+  'mock.d.btn1':'Termin Buchen',
+  'mock.d.rtext':'4.6 \u00b7 89 Bewertungen',
+  'mock.d.svc1':'Kontrolle','mock.d.svc2':'Bleaching','mock.d.svc3':'F\u00fcllungen','mock.d.svc4':'Kronen',
+  'mock.d.svc1s':'2x j\u00e4hrlich','mock.d.svc2s':'Professionell','mock.d.svc3s':'Schmerzfrei','mock.d.svc4s':'Keramisch',
+  'mock.d.rscore':'4.6 \u00b7 89 Bewertungen','mock.d.rdate':'vor 1 Woche',
+  'mock.d.rtext2':'\u201cImmer bestens betreut. Schmerzfreie Behandlungen. Absolut empfehlenswert!\u201d',
   'price.label':'Preise','price.title':'Einfache, transparente Preise','price.sub':'Starten Sie kostenlos. Upgraden Sie, wenn Sie bereit sind.',
   'price.monthly':'Monatlich','price.yearly':'Jährlich','price.save':'-20%','price.popular':'Am Beliebtesten','price.permonth':'/Monat',
   'price.t1.name':'Vorschau','price.t1.price':'Kostenlos','price.t1.desc':'Sehen Sie, wie Ihre Website aussieht. Keine Verpflichtungen.',
@@ -1061,6 +1325,28 @@ fr:{
   'port.p1.c1':'Couleur de marque détectée (or)','port.p1.c2':'156 Google Reviews intégrés','port.p1.c3':'Services et descriptions écrits par IA',
   'port.p2.badge':'Template Moderne','port.p2.title':'Dentistes & Cliniques','port.p2.desc':'Designs propres et professionnels qui inspirent confiance. Idéal pour les cabinets médicaux et kinésithérapeutes.',
   'port.p2.c1':'Palettes de couleurs bleues de confiance','port.p2.c2':'Horaires et localisation mis en avant','port.p2.c3':'Traitements avec descriptions claires',
+  'port.disclaimer':'Ce ne sont que des exemples. Nous cr\u00e9ons un site web unique et sur mesure pour tout type d\u2019entreprise \u2014 du restaurant au concessionnaire, du salon de coiffure au comptable.',
+  'mock.s.nav1':'Services','mock.s.nav2':'Portfolio','mock.s.nav3':'Contact',
+  'mock.s.cta':'R\u00e9server',
+  'mock.s.overline':'Salon de Coiffure Premium',
+  'mock.s.h1':'Votre Style,<br><span>Notre Savoir-faire.</span>',
+  'mock.s.sub':'Depuis 15 ans le meilleur coiffeur d\u2019Amsterdam-Est. 156 avis cinq \u00e9toiles sur Google.',
+  'mock.s.btn1':'Prendre Rendez-vous','mock.s.btn2':'Voir les Services',
+  'mock.s.svc1':'Coupe','mock.s.svc2':'Coloration','mock.s.svc3':'Coiffage',
+  'mock.s.svc1p':'d\u00e8s \u20ac25','mock.s.svc2p':'d\u00e8s \u20ac55','mock.s.svc3p':'d\u00e8s \u20ac30',
+  'mock.s.rscore':'4.8 \u00b7 156 avis','mock.s.rdate':'il y a 2 jours',
+  'mock.s.rtext':'\u201cCoiffeur fantastique\u00a0! Exactement ce que je voulais. Ambiance et r\u00e9sultat parfaits.\u201d',
+  'mock.d.nav1':'Soins','mock.d.nav2':'\u00c9quipe','mock.d.nav3':'Contact',
+  'mock.d.cta':'Rendez-vous',
+  'mock.d.overline':'Cabinet Dentaire',
+  'mock.d.h1':'Soins<br><span>Dentaires</span> Personnels<br>\u00e0 De Jordaan.',
+  'mock.d.sub':'Votre dentiste de confiance depuis 20 ans. Personnel, indolore et professionnel.',
+  'mock.d.btn1':'Prendre Rendez-vous',
+  'mock.d.rtext':'4.6 \u00b7 89 avis',
+  'mock.d.svc1':'Contr\u00f4le','mock.d.svc2':'Blanchiment','mock.d.svc3':'Obturations','mock.d.svc4':'Couronnes',
+  'mock.d.svc1s':'2x par an','mock.d.svc2s':'Professionnel','mock.d.svc3s':'Indolore','mock.d.svc4s':'C\u00e9ramique',
+  'mock.d.rscore':'4.6 \u00b7 89 avis','mock.d.rdate':'il y a 1 semaine',
+  'mock.d.rtext2':'\u201cToujours tr\u00e8s bien soign\u00e9. Traitements indolores. Je recommande vivement\u00a0!\u201d',
   'price.label':'Tarifs','price.title':'Des prix simples et transparents','price.sub':'Commencez gratuitement. Passez au supérieur quand vous êtes prêt.',
   'price.monthly':'Mensuel','price.yearly':'Annuel','price.save':'-20%','price.popular':'Le Plus Populaire','price.permonth':'/mois',
   'price.t1.name':'Aperçu','price.t1.price':'Gratuit','price.t1.desc':'Voyez à quoi ressemble votre site. Sans engagement.',
@@ -1164,6 +1450,10 @@ var FLAGS={nl:'https://flagcdn.com/w40/nl.png',en:'https://flagcdn.com/w40/gb.pn
       document.querySelectorAll('[data-i18n]').forEach(function(el){
         var key=el.getAttribute('data-i18n');
         if(t[key]&&typeof t[key]==='string')el.textContent=t[key];
+      });
+      document.querySelectorAll('[data-i18n-html]').forEach(function(el){
+        var key=el.getAttribute('data-i18n-html');
+        if(t[key]&&typeof t[key]==='string')el.innerHTML=t[key];
       });
       document.querySelectorAll('[data-i18n-ph]').forEach(function(el){
         var key=el.getAttribute('data-i18n-ph');
