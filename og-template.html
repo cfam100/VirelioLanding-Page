@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    width: 1200px;
+    height: 630px;
+    font-family: 'DM Sans', -apple-system, sans-serif;
+    background: #0a0a18;
+    color: #fff;
+    overflow: hidden;
+    position: relative;
+  }
+
+  /* Background glow effects */
+  .bg-glow-1 {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(47, 111, 255, 0.15) 0%, transparent 65%);
+    top: -200px;
+    right: -50px;
+    border-radius: 50%;
+  }
+  .bg-glow-2 {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(47, 111, 255, 0.08) 0%, transparent 65%);
+    bottom: -100px;
+    left: 100px;
+    border-radius: 50%;
+  }
+  .bg-glow-3 {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(124, 58, 237, 0.1) 0%, transparent 65%);
+    top: 200px;
+    left: 400px;
+    border-radius: 50%;
+  }
+
+  .container {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    height: 100%;
+    padding: 52px 64px 48px;
+  }
+
+  .left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-right: 48px;
+  }
+
+  .logo {
+    font-family: 'Syne', sans-serif;
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .logo-dot {
+    width: 8px;
+    height: 8px;
+    background: #2f6fff;
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+  .content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: -10px;
+  }
+
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 16px;
+    background: rgba(47, 111, 255, 0.1);
+    border: 1px solid rgba(47, 111, 255, 0.2);
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #5991ff;
+    width: fit-content;
+    margin-bottom: 24px;
+    letter-spacing: 0.02em;
+  }
+
+  .badge-dot {
+    width: 6px;
+    height: 6px;
+    background: #2f6fff;
+    border-radius: 50%;
+  }
+
+  h1 {
+    font-family: 'Syne', sans-serif;
+    font-size: 50px;
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -1.5px;
+    margin-bottom: 18px;
+  }
+
+  .text-gradient {
+    background: linear-gradient(135deg, #5991ff, #2f6fff, #818cf8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .subtitle {
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.5);
+    line-height: 1.6;
+    max-width: 420px;
+  }
+
+  /* Stats row */
+  .stats {
+    display: flex;
+    gap: 40px;
+  }
+
+  .stat-item {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .stat-value {
+    font-family: 'Syne', sans-serif;
+    font-size: 28px;
+    font-weight: 800;
+    color: #fff;
+  }
+
+  .stat-label {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.35);
+    margin-top: 2px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  /* Right side — mock browser preview */
+  .right {
+    width: 420px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .browser-mock {
+    width: 380px;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.5), 0 0 80px rgba(47, 111, 255, 0.08);
+    transform: perspective(800px) rotateY(-4deg) rotateX(2deg);
+  }
+
+  .browser-bar {
+    background: #1e1e2e;
+    padding: 10px 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .browser-dots {
+    display: flex;
+    gap: 6px;
+  }
+
+  .browser-dots span {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+  }
+
+  .browser-dots span:nth-child(1) { background: #ff5f57; }
+  .browser-dots span:nth-child(2) { background: #febc2e; }
+  .browser-dots span:nth-child(3) { background: #28c840; }
+
+  .browser-url {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 6px;
+    padding: 5px 12px;
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.4);
+    margin-left: 8px;
+  }
+
+  .browser-body {
+    background: #0f0f28;
+    padding: 0;
+  }
+
+  /* Mini website mock inside the browser */
+  .mock-site {
+    position: relative;
+  }
+
+  .mock-hero {
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    padding: 24px 20px 20px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .mock-hero::before {
+    content: '';
+    position: absolute;
+    top: -30px;
+    right: -30px;
+    width: 120px;
+    height: 120px;
+    background: radial-gradient(circle, rgba(47, 111, 255, 0.2) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+
+  .mock-nav {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 18px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .mock-logo {
+    width: 24px;
+    height: 24px;
+    border-radius: 6px;
+    background: linear-gradient(135deg, #c8a96e, #f0d48a);
+  }
+
+  .mock-nav-links {
+    display: flex;
+    gap: 10px;
+    margin-left: auto;
+  }
+
+  .mock-nav-link {
+    width: 32px;
+    height: 4px;
+    border-radius: 2px;
+    background: rgba(255, 255, 255, 0.15);
+  }
+
+  .mock-heading {
+    font-family: 'Syne', sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 1.15;
+    margin-bottom: 8px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .mock-heading span {
+    background: linear-gradient(135deg, #c8a96e, #f0d48a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .mock-subtext {
+    display: flex;
+    gap: 4px;
+    margin-bottom: 12px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .mock-subtext span {
+    height: 4px;
+    border-radius: 2px;
+    background: rgba(255, 255, 255, 0.12);
+  }
+
+  .mock-btn {
+    display: inline-block;
+    padding: 6px 16px;
+    background: #2f6fff;
+    border-radius: 6px;
+    font-size: 10px;
+    font-weight: 600;
+    color: white;
+    position: relative;
+    z-index: 1;
+  }
+
+  .mock-cards {
+    padding: 16px 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 8px;
+  }
+
+  .mock-card {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 8px;
+    padding: 12px 10px;
+    text-align: center;
+  }
+
+  .mock-card-icon {
+    width: 20px;
+    height: 20px;
+    border-radius: 6px;
+    margin: 0 auto 6px;
+  }
+
+  .mock-card-icon.c1 { background: rgba(47, 111, 255, 0.2); }
+  .mock-card-icon.c2 { background: rgba(16, 185, 129, 0.2); }
+  .mock-card-icon.c3 { background: rgba(245, 158, 11, 0.2); }
+
+  .mock-card-line {
+    height: 3px;
+    border-radius: 2px;
+    background: rgba(255, 255, 255, 0.1);
+    margin: 0 auto;
+    width: 70%;
+  }
+
+  .mock-card-line2 {
+    height: 3px;
+    border-radius: 2px;
+    background: rgba(255, 255, 255, 0.06);
+    margin: 4px auto 0;
+    width: 50%;
+  }
+
+  /* Steps indicators floating */
+  .steps-float {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    right: -16px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 5;
+  }
+
+  .step-pill {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 14px;
+    background: rgba(15, 15, 40, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  }
+
+  .step-num {
+    width: 24px;
+    height: 24px;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    font-weight: 700;
+    color: white;
+  }
+
+  .step-num.s1 { background: linear-gradient(135deg, #2f6fff, #1a52f5); }
+  .step-num.s2 { background: linear-gradient(135deg, #7c3aed, #6d28d9); }
+  .step-num.s3 { background: linear-gradient(135deg, #10b981, #059669); }
+
+  .step-text {
+    font-size: 12px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  .step-sub {
+    font-size: 10px;
+    color: rgba(255, 255, 255, 0.35);
+    font-weight: 400;
+  }
+
+  /* Bottom bar */
+  .bottom-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 64px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    z-index: 2;
+  }
+
+  .bottom-left {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.3);
+    font-weight: 500;
+  }
+
+  .bottom-right {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.3);
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .green-dot {
+    width: 6px;
+    height: 6px;
+    background: #10b981;
+    border-radius: 50%;
+  }
+</style>
+</head>
+<body>
+  <div class="bg-glow-1"></div>
+  <div class="bg-glow-2"></div>
+  <div class="bg-glow-3"></div>
+
+  <div class="container">
+    <div class="left">
+      <div class="logo">VirelioCreator</div>
+
+      <div class="content">
+        <div class="badge">
+          <span class="badge-dot"></span>
+          AI-Powered Web Design
+        </div>
+
+        <h1>Professional Websites,<br><span class="text-gradient">Automatically Generated</span></h1>
+
+        <p class="subtitle">We find your business on Google Maps and generate a custom, professional website — fully automatic, ready in 24 hours.</p>
+      </div>
+
+      <div class="stats">
+        <div class="stat-item">
+          <span class="stat-value">150+</span>
+          <span class="stat-label">Businesses scanned</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-value">&#10003;</span>
+          <span class="stat-label">Personalized designs</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-value">24h</span>
+          <span class="stat-label">Delivery</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-value">100%</span>
+          <span class="stat-label">Automatic</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="right">
+      <div style="position: relative;">
+        <div class="browser-mock">
+          <div class="browser-bar">
+            <div class="browser-dots">
+              <span></span><span></span><span></span>
+            </div>
+            <div class="browser-url">yourbusiness.nl</div>
+          </div>
+          <div class="browser-body">
+            <div class="mock-site">
+              <div class="mock-hero">
+                <div class="mock-nav">
+                  <div class="mock-logo"></div>
+                  <div class="mock-nav-links">
+                    <div class="mock-nav-link"></div>
+                    <div class="mock-nav-link"></div>
+                    <div class="mock-nav-link"></div>
+                  </div>
+                </div>
+                <div class="mock-heading">Your Style,<br><span>Our Craft.</span></div>
+                <div class="mock-subtext">
+                  <span style="width: 80px;"></span>
+                  <span style="width: 60px;"></span>
+                  <span style="width: 40px;"></span>
+                </div>
+                <div class="mock-btn">Get Started</div>
+              </div>
+              <div class="mock-cards">
+                <div class="mock-card">
+                  <div class="mock-card-icon c1"></div>
+                  <div class="mock-card-line"></div>
+                  <div class="mock-card-line2"></div>
+                </div>
+                <div class="mock-card">
+                  <div class="mock-card-icon c2"></div>
+                  <div class="mock-card-line"></div>
+                  <div class="mock-card-line2"></div>
+                </div>
+                <div class="mock-card">
+                  <div class="mock-card-icon c3"></div>
+                  <div class="mock-card-line"></div>
+                  <div class="mock-card-line2"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Floating step pills -->
+        <div class="steps-float">
+          <div class="step-pill">
+            <div class="step-num s1">1</div>
+            <div>
+              <div class="step-text">Scan</div>
+              <div class="step-sub">Google Maps</div>
+            </div>
+          </div>
+          <div class="step-pill">
+            <div class="step-num s2">2</div>
+            <div>
+              <div class="step-text">Design</div>
+              <div class="step-sub">AI generates</div>
+            </div>
+          </div>
+          <div class="step-pill">
+            <div class="step-num s3">3</div>
+            <div>
+              <div class="step-text">Launch</div>
+              <div class="step-sub">Go live</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bottom-bar">
+    <div class="bottom-left">creator.virelio.nl</div>
+    <div class="bottom-right">
+      <span class="green-dot"></span>
+      150+ businesses scanned
+    </div>
+  </div>
+</body>
+</html>
