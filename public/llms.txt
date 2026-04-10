@@ -1,0 +1,41 @@
+# VirelioCreator
+
+> AI-powered website generator that finds businesses on Google Maps and automatically creates professional, custom websites.
+
+## About
+
+VirelioCreator is a SaaS tool that scans Google Maps for businesses, extracts their data (name, address, reviews, photos), and uses AI to generate a complete, professional website tailored to each business. The entire process is automatic — no manual input required.
+
+## Key Features
+
+- Automatic business discovery via Google Maps
+- AI-generated copy tailored to each business
+- Brand color detection and consistent design
+- Google Reviews integration
+- Mobile-responsive templates
+- SEO-optimized from day one
+- Custom domain support
+- 24-hour delivery
+
+## How It Works
+
+1. **Scan** — We search Google Maps and find the business. Name, address, reviews, and photos are collected automatically.
+2. **Design** — AI analyzes the brand, selects the right template, and generates a complete website with matching colors, reviews, and photos.
+3. **Launch** — A preview link is delivered. Once approved, the website goes live with a custom domain.
+
+## Pricing
+
+- **Starter** (Free) — Preview website, 1 template
+- **Professional** (€29/month) — Custom domain, all templates, SEO optimization
+- **Enterprise** (Custom) — Multiple locations, API access, priority support
+
+## Contact
+
+- Website: https://creator.virelio.nl
+- Email: Available via contact form on the website
+
+## Technical
+
+- Built with: HTML, Tailwind CSS, Three.js
+- Hosting: GitHub Pages
+- Languages: Dutch (primary), English
